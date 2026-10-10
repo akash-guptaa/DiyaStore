@@ -169,7 +169,7 @@ export default function AdminProducts() {
               <tr key={p.id} className="border-b">
                 <td className="p-4">
                   {p.images?.[0] ? (
-                    <img src={p.images[0].url} className="w-12 h-12 object-cover rounded shadow-sm" />
+                    <img loading="lazy" src={p.images[0].url} className="w-12 h-12 object-cover rounded shadow-sm" />
                   ) : (
                     <div className="w-12 h-12 bg-stone-200 rounded"></div>
                   )}
@@ -213,7 +213,7 @@ export default function AdminProducts() {
                   <div className="flex flex-wrap gap-4 mb-4">
                     {formData.images.map((img, idx) => (
                       <div key={idx} className="relative group">
-                        <img src={img.url} className="w-24 h-24 object-cover rounded shadow-sm border border-stone-300" />
+                        <img loading="lazy" src={img.url} className="w-24 h-24 object-cover rounded shadow-sm border border-stone-300" />
                         <button type="button" onClick={() => removeImage(idx)} className="absolute -top-2 -right-2 bg-red-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">X</button>
                       </div>
                     ))}

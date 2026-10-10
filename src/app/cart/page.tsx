@@ -21,7 +21,7 @@ export default function CartPage() {
         {items.map(item => (
           <div key={item.id} className="flex items-center justify-between border-b pb-4 last:border-0 last:pb-0 gap-4">
             <div className="flex items-center gap-4 flex-1">
-              {item.image && <img src={item.image} className="w-16 h-16 object-cover rounded" />}
+              {item.image && <img loading="lazy" src={item.image} className="w-16 h-16 object-cover rounded" />}
               <div>
                 <div className="font-semibold">{item.name}</div>
                 <div className="text-sm text-stone-500">₹{item.price}</div>

@@ -25,7 +25,7 @@ export default function BannerCarousel({ headline, subtitle }: { headline: strin
           key={src}
           className={'absolute inset-0 transition-opacity duration-1000 ' + (idx === currentIndex ? 'opacity-100' : 'opacity-0')}
         >
-          <img src={src} alt="Banner" className="w-full h-full object-cover object-center opacity-60" />
+          <img loading="lazy" src={src} alt="Banner" className="w-full h-full object-cover object-center opacity-60" />
         </div>
       ))}
       

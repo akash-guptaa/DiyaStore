@@ -76,7 +76,7 @@ Please confirm availability and delivery details.`;
       <h1 className="text-2xl font-merriweather font-bold mb-6 text-center">Complete Your Order</h1>
       
       <div className="bg-stone-50 p-4 rounded mb-6 flex gap-4">
-        {product.images?.[0] && <img src={product.images[0].url} className="w-16 h-16 object-cover rounded" alt={product.images[0].alt || 'Product'} />}
+        {product.images?.[0] && <img loading="lazy" src={product.images[0].url} className="w-16 h-16 object-cover rounded" alt={product.images[0].alt || 'Product'} />}
         <div>
           <div className="font-semibold">{product.name}</div>
           <div className="text-sm text-stone-500">{product.productCode}</div>

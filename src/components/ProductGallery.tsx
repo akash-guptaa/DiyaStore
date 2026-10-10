@@ -23,7 +23,7 @@ export default function ProductGallery({ images, autoSlideDelay }: { images: Pro
     <div className="flex flex-col md:flex-row-reverse gap-4">
       {/* Main Image */}
       <div className="flex-1 aspect-square bg-stone-100 rounded-lg overflow-hidden border border-stone-200">
-        <img src={images[currentIndex].url} alt={images[currentIndex].alt} className="w-full h-full object-cover transition-opacity duration-300" />
+        <img loading="lazy" src={images[currentIndex].url} alt={images[currentIndex].alt} className="w-full h-full object-cover transition-opacity duration-300" />
       </div>
       
       {/* Thumbnails */}
@@ -35,7 +35,7 @@ export default function ProductGallery({ images, autoSlideDelay }: { images: Pro
               onClick={() => setCurrentIndex(idx)}
               className={`relative aspect-square rounded overflow-hidden border-2 transition-all shrink-0 w-20 md:w-full ${currentIndex === idx ? 'border-rose-700 opacity-100' : 'border-transparent opacity-60 hover:opacity-100'}`}
             >
-              <img src={img.url} alt={img.alt} className="w-full h-full object-cover" />
+              <img loading="lazy" src={img.url} alt={img.alt} className="w-full h-full object-cover" />
             </button>
           ))}
         </div>

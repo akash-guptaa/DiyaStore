@@ -22,7 +22,7 @@ export default async function Home() {
               <Link href={'/product/' + (product.slug || product.id)} className="flex-1">
                 <div className="relative aspect-square bg-stone-100">
                   {product.images && product.images.length > 0 && (
-                    <img src={product.images[0].url} alt={product.images[0].alt} className="object-cover w-full h-full" />
+                    <img loading="lazy" src={product.images[0].url} alt={product.images[0].alt} className="object-cover w-full h-full" />
                   )}
                 </div>
                 <div className="p-4">
