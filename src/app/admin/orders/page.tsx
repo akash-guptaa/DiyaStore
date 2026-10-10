@@ -92,7 +92,7 @@ export default function AdminOrders() {
                   {o.customerCity && <div className="text-xs text-stone-400 mt-1">{o.customerCity}, {o.customerState}</div>}
                 </td>
                 <td className="p-4">
-                  {o.items?.map((i, idx) => (
+                  {(o.items || [{ productName: o.productName, quantity: o.quantity }]).map((i: any, idx: number) => (
                     <div key={idx} className="text-sm bg-stone-100 px-2 py-1 rounded inline-block m-1 border">
                       {i.quantity}x {i.productName}
                     </div>

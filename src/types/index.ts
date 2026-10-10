@@ -43,7 +43,11 @@ export interface Order {
   customerPincode?: string;
   customerState?: string;
   orderNotes?: string;
-  items: OrderItem[];
+  items?: OrderItem[];
+  productName?: string;
+  quantity?: number;
+  productCode?: string;
+  productId?: string;
   total: number;
   status: 'pending_whatsapp_confirmation' | 'confirmed' | 'collect_from_shop' | 'delivered' | 'completed' | 'cancelled';
   createdAt: string;

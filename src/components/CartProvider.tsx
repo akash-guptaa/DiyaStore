@@ -17,6 +17,8 @@ interface CartContextType {
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
   cartTotal: number;
+  isCartBumping: boolean;
+  toastMessage: string | null;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -24,6 +26,8 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [isCartBumping, setIsCartBumping] = useState(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem('cart');
@@ -43,7 +47,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
       return [...prev, newItem];
     });
-    alert('Added to cart!');
+    setIsCartBumping(true);
+    setToastMessage(`Added to cart!`);
+    setTimeout(() => setIsCartBumping(false), 300);
+    setTimeout(() => setToastMessage(null), 3000);
   };
 
   const removeFromCart = (id: string) => {
@@ -60,7 +67,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const cartTotal = items.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
   return (
-    <CartContext.Provider value={{ items, addToCart, removeFromCart, updateQuantity, clearCart, cartTotal }}>
+    <CartContext.Provider value={{ items, addToCart, removeFromCart, updateQuantity, clearCart, cartTotal, isCartBumping, toastMessage }}>
       {children}
     </CartContext.Provider>
   );

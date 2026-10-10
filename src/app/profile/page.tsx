@@ -106,7 +106,7 @@ export default function ProfilePage() {
                     {new Date(o.createdAt).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </div>
                   <div className="space-y-1">
-                    {o.items.map((i, idx) => (
+                    {(o.items || [{ productName: o.productName, quantity: o.quantity }]).map((i: any, idx: number) => (
                       <div key={idx} className="text-sm font-medium">
                         {i.quantity}x {i.productName}
                       </div>

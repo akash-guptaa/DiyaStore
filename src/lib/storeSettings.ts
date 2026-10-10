@@ -27,7 +27,7 @@ export const getSettings = async (): Promise<StoreSettings> => {
 
 export const saveSettings = async (settings: StoreSettings): Promise<void> => {
   if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+    try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (e) { console.error('Failed to mkdir ' + DATA_DIR, e); }
   }
-  await fs.promises.writeFile(SETTINGS_FILE, JSON.stringify(settings, null, 2));
+  try { await fs.promises.writeFile(SETTINGS_FILE, JSON.stringify(settings, null, 2)); } catch (e) { console.error('Failed to write ' + SETTINGS_FILE, e); }
 };

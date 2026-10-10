@@ -13,8 +13,8 @@ export const getCustomers = async (): Promise<Customer[]> => {
 };
 
 export const saveCustomers = async (customers: Customer[]): Promise<void> => {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  await fs.promises.writeFile(FILE, JSON.stringify(customers, null, 2));
+  if (!fs.existsSync(DATA_DIR)) try { fs.mkdirSync(DATA_DIR, { recursive: true }); } catch (e) { console.error('Failed to mkdir ' + DATA_DIR, e); }
+  try { await fs.promises.writeFile(FILE, JSON.stringify(customers, null, 2)); } catch (e) { console.error('Failed to write ' + FILE, e); }
 };
 
 export const getAllDerivedCustomers = async (): Promise<Customer[]> => {

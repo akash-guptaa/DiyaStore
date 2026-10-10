@@ -47,5 +47,59 @@
     "status": "pending_whatsapp_confirmation",
     "createdAt": "2026-10-10T17:57:45.191Z",
     "updatedAt": "2026-10-10T17:57:45.191Z"
+  },
+  {
+    "id": "ord_s0v7kxgt8",
+    "customerName": "akash gupta",
+    "customerMobile": "07400422743",
+    "items": [
+      {
+        "productId": "prod_brass001",
+        "productCode": "BRASS-001",
+        "productName": "Premium Golden Brass Diya",
+        "unitPrice": 699,
+        "quantity": 6,
+        "total": 4194
+      },
+      {
+        "productId": "prod_design001",
+        "productCode": "DSGN-001",
+        "productName": "Modern Glass & Gold Tealight Holders",
+        "unitPrice": 1299,
+        "quantity": 6,
+        "total": 7794
+      }
+    ],
+    "total": 11988,
+    "status": "pending_whatsapp_confirmation",
+    "createdAt": "2026-10-10T18:50:40.314Z",
+    "updatedAt": "2026-10-10T18:50:40.314Z"
+  },
+  {
+    "id": "ord_lmqvlv775",
+    "customerName": "akash gupta",
+    "customerMobile": "07400422743",
+    "items": [
+      {
+        "productId": "prod_brass001",
+        "productCode": "BRASS-001",
+        "productName": "Premium Golden Brass Diya",
+        "unitPrice": 699,
+        "quantity": 1,
+        "total": 699
+      },
+      {
+        "productId": "prod_terra001",
+        "productCode": "TERRA-001",
+        "productName": "Handmade Terracotta Rangoli Diya Set",
+        "unitPrice": 399,
+        "quantity": 1,
+        "total": 399
+      }
+    ],
+    "total": 1098,
+    "status": "pending_whatsapp_confirmation",
+    "createdAt": "2026-10-10T18:51:09.523Z",
+    "updatedAt": "2026-10-10T18:51:09.523Z"
   }
 ]
