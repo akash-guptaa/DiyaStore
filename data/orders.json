@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ord_31yuccn4s",
+    "customerName": "akash gupta ",
+    "customerMobile": "7400422743",
+    "productId": "prod_1001",
+    "productCode": "DIYA-001",
+    "productName": "Handcrafted Terracotta Diya Set",
+    "unitPrice": 299,
+    "quantity": 1,
+    "total": 299,
+    "status": "confirmed",
+    "createdAt": "2026-10-10T14:36:46.033Z",
+    "updatedAt": "2026-10-10T14:48:55.653Z"
+  },
+  {
+    "id": "ord_wbcsdfahi",
+    "customerName": "Suraj",
+    "customerMobile": "7977055303",
+    "items": [
+      {
+        "productId": "prod_1001",
+        "productCode": "DIYA-001",
+        "productName": "Handcrafted Terracotta Diya Set",
+        "unitPrice": 299,
+        "quantity": 1,
+        "total": 299
+      },
+      {
+        "productId": "prod_1002",
+        "productCode": "DIYA-002",
+        "productName": "Brass Kuber Diya",
+        "unitPrice": 799,
+        "quantity": 1,
+        "total": 799
+      },
+      {
+        "productId": "prod_1003",
+        "productCode": "DIYA-003",
+        "productName": "Designer Lotus Diya",
+        "unitPrice": 450,
+        "quantity": 1,
+        "total": 450
+      }
+    ],
+    "total": 1548,
+    "status": "pending_whatsapp_confirmation",
+    "createdAt": "2026-10-10T17:57:45.191Z",
+    "updatedAt": "2026-10-10T17:57:45.191Z"
+  }
+]

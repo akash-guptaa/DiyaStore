@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #faf7f2;
+  --color-brand-ivory: #fffdfa;
+  --color-brand-maroon: #7b2c2c;
+  --color-brand-maroon-dark: #5c1f1f;
+  --color-brand-saffron: #d97746;
+  --color-brand-terracotta: #c25f3f;
+  --color-brand-gold: #c5a975;
+  --color-brand-dark: #2c2420;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-cream);
+    color: var(--color-brand-dark);
+  }
+}
