@@ -57,6 +57,8 @@ export default function AdminSettings() {
               <input type="text" name="whatsappNumber" value={settings.whatsappNumber || ''} onChange={handleChange} className="w-full border rounded p-2" />
             </div>
             <div>
+              <label className="block text-sm font-medium mb-1">Google Maps Link</label>
+              <input type="text" name="mapLocationUrl" value={settings.mapLocationUrl || ''} onChange={handleChange} className="w-full border rounded p-2 mb-4" />
               <label className="block text-sm font-medium mb-1">Store Address</label>
               <textarea name="address" value={settings.address || ''} onChange={handleChange} className="w-full border rounded p-2 h-24" />
             </div>

@@ -7,4 +7,5 @@ export interface StoreSettings {
   heroSubtitle: string;
   heroButtonText: string;
   autoSlideDelay: number;
+  mapLocationUrl?: string;
 }
