@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useCart } from '@/components/CartProvider';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function GlobalCheckoutPage() {
   const { items, cartTotal, clearCart } = useCart();
@@ -11,6 +12,33 @@ export default function GlobalCheckoutPage() {
     name: '', mobile: '', email: '', address: '', city: '', state: '', pincode: '', notes: ''
   });
   const [submitting, setSubmitting] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('customer_profile');
+    if (saved) {
+      const data = JSON.parse(saved);
+      setFormData(prev => ({ ...prev, name: data.name, mobile: data.mobile }));
+      
+      // Fetch past orders to auto-fill address
+      fetch('/api/orders/customer/' + data.mobile)
+        .then(r => r.json())
+        .then(orders => {
+          if (orders && orders.length > 0) {
+            const last = orders[0];
+            setFormData(prev => ({
+              ...prev,
+              address: prev.address || last.customerAddress || '',
+              city: prev.city || last.customerCity || '',
+              state: prev.state || last.customerState || '',
+              pincode: prev.pincode || last.customerPincode || '',
+              email: prev.email || last.customerEmail || ''
+            }));
+          }
+        })
+        .catch(() => {});
+    }
+  }, []);
+
 
   if (items.length === 0) return <div className="p-8 text-center">Your cart is empty.</div>;
 
