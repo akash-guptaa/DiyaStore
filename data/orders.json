@@ -120,5 +120,28 @@
     "status": "pending_whatsapp_confirmation",
     "createdAt": "2026-10-10T19:00:34.358Z",
     "updatedAt": "2026-10-10T19:00:34.358Z"
+  },
+  {
+    "id": "ord_gl54t4yez",
+    "customerName": "akash gupta",
+    "customerMobile": "7400422743",
+    "items": [
+      {
+        "productId": "prod_brass001",
+        "productCode": "BRASS-001",
+        "productName": "Premium Golden Brass Diya",
+        "unitPrice": 699,
+        "quantity": 1,
+        "total": 699
+      }
+    ],
+    "total": 699,
+    "status": "pending_whatsapp_confirmation",
+    "createdAt": "2026-10-10T19:04:53.601Z",
+    "updatedAt": "2026-10-10T19:04:53.601Z",
+    "customerAddress": "Shop No. 1, Girnar Dharshan, Narayan Nagar Road",
+    "customerCity": "Bhayandar West",
+    "customerState": "Maharashtra",
+    "customerPincode": "401101"
   }
 ]
