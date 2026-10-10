@@ -48,7 +48,8 @@ export default function GlobalCheckoutPage() {
       text += `\n*Total: ₹${order.total}*\n\nPlease confirm!`;
 
       clearCart();
-      window.location.href = `https://wa.me/917400422743?text=${encodeURIComponent(text)}`;
+      window.open(`https://wa.me/917400422743?text=${encodeURIComponent(text)}`, '_blank');
+      window.location.href = '/profile';
       
     } catch (err) {
       alert('Failed to place order');
