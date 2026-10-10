@@ -1,8 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCart } from '@/components/CartProvider';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
 export default function GlobalCheckoutPage() {
   const { items, cartTotal, clearCart } = useCart();
@@ -12,6 +11,7 @@ export default function GlobalCheckoutPage() {
     name: '', mobile: '', email: '', address: '', city: '', state: '', pincode: '', notes: ''
   });
   const [submitting, setSubmitting] = useState(false);
+  const [pastAddresses, setPastAddresses] = useState<any[]>([]);
 
   useEffect(() => {
     const saved = localStorage.getItem('customer_profile');
@@ -19,26 +19,47 @@ export default function GlobalCheckoutPage() {
       const data = JSON.parse(saved);
       setFormData(prev => ({ ...prev, name: data.name, mobile: data.mobile }));
       
-      // Fetch past orders to auto-fill address
       fetch('/api/orders/customer/' + data.mobile)
         .then(r => r.json())
         .then(orders => {
           if (orders && orders.length > 0) {
-            const last = orders[0];
-            setFormData(prev => ({
-              ...prev,
-              address: prev.address || last.customerAddress || '',
-              city: prev.city || last.customerCity || '',
-              state: prev.state || last.customerState || '',
-              pincode: prev.pincode || last.customerPincode || '',
-              email: prev.email || last.customerEmail || ''
-            }));
+            const uniqueAddrs: any[] = [];
+            const seen = new Set();
+            
+            for (const o of orders) {
+              if (o.customerAddress) {
+                const key = (o.customerAddress + o.customerCity + o.customerPincode).toLowerCase();
+                if (!seen.has(key)) {
+                  seen.add(key);
+                  uniqueAddrs.push({
+                    address: o.customerAddress,
+                    city: o.customerCity,
+                    state: o.customerState,
+                    pincode: o.customerPincode,
+                    email: o.customerEmail || ''
+                  });
+                }
+              }
+            }
+            
+            setPastAddresses(uniqueAddrs);
+            
+            if (uniqueAddrs.length > 0) {
+              const last = uniqueAddrs[0];
+              setFormData(prev => ({
+                ...prev,
+                address: prev.address || last.address || '',
+                city: prev.city || last.city || '',
+                state: prev.state || last.state || '',
+                pincode: prev.pincode || last.pincode || '',
+                email: prev.email || last.email || ''
+              }));
+            }
           }
         })
         .catch(() => {});
     }
   }, []);
-
 
   if (items.length === 0) return <div className="p-8 text-center">Your cart is empty.</div>;
 
@@ -69,11 +90,13 @@ export default function GlobalCheckoutPage() {
       
       let text = `Hello! I would like to place an order.\n\nOrder ID: ${order.id}\nName: ${order.customerName}\nMobile: ${order.customerMobile}\nAddress: ${order.customerAddress}, ${order.customerCity}, ${order.customerState} - ${order.customerPincode}\nNotes: ${order.orderNotes}\n\n*Items:*\n`;
       
-      order.items.forEach((item: any) => {
-        text += `- ${item.quantity}x ${item.productName} (${item.productCode}) @ ₹${item.unitPrice}\n`;
-      });
+      if (order.items) {
+        order.items.forEach((item: any) => {
+          text += `- ${item.quantity}x ${item.productName} (${item.productCode}) @ Rs.${item.unitPrice}\n`;
+        });
+      }
       
-      text += `\n*Total: ₹${order.total}*\n\nPlease confirm!`;
+      text += `\n*Total: Rs.${order.total}*\n\nPlease confirm!`;
 
       clearCart();
       window.open(`https://wa.me/917400422743?text=${encodeURIComponent(text)}`, '_blank');
@@ -91,21 +114,40 @@ export default function GlobalCheckoutPage() {
         <h1 className="text-3xl font-merriweather font-bold mb-6 text-stone-900 border-b pb-4">Checkout</h1>
         <div className="bg-stone-50 p-4 rounded mb-8 text-stone-700 font-medium flex justify-between border">
           <span>{items.length} item(s)</span>
-          <span>Total: ₹{cartTotal}</span>
+          <span>Total: Rs.{cartTotal}</span>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold mb-1 text-stone-800">Full Name *</label>
-              <input required type="text" name="name" className="w-full border border-stone-300 rounded p-2 focus:ring focus:ring-rose-200" value={formData.name} onChange={handleChange} />
+              <input required type="text" name="name" className="w-full border border-stone-300 rounded p-2 focus:ring focus:ring-rose-200 bg-stone-50" value={formData.name} onChange={handleChange} />
             </div>
             <div>
               <label className="block text-sm font-semibold mb-1 text-stone-800">Mobile Number *</label>
-              <input required type="tel" name="mobile" className="w-full border border-stone-300 rounded p-2 focus:ring focus:ring-rose-200" value={formData.mobile} onChange={handleChange} placeholder="+91" />
+              <input required type="tel" name="mobile" className="w-full border border-stone-300 rounded p-2 focus:ring focus:ring-rose-200 bg-stone-50" value={formData.mobile} onChange={handleChange} placeholder="+91" />
             </div>
           </div>
           
+          {pastAddresses.length > 0 && (
+            <div className="mt-8 mb-4 border-t border-stone-200 pt-6">
+              <label className="block text-sm font-bold mb-3 text-rose-900 uppercase tracking-wide">Select a Past Address</label>
+              <div className="flex gap-4 overflow-x-auto pb-2 snap-x">
+                {pastAddresses.map((addr, idx) => (
+                  <div 
+                    key={idx}
+                    onClick={() => setFormData(prev => ({ ...prev, ...addr }))}
+                    className="snap-start flex-shrink-0 w-64 border-2 border-stone-200 rounded-lg p-4 cursor-pointer hover:border-rose-500 hover:bg-rose-50 transition-all bg-white shadow-sm"
+                  >
+                    <p className="font-bold text-stone-800 truncate mb-1">{addr.address}</p>
+                    <p className="text-stone-600 text-sm truncate">{addr.city}, {addr.state}</p>
+                    <p className="text-stone-500 text-sm">{addr.pincode}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div>
             <label className="block text-sm font-semibold mb-1 text-stone-800">Email Address (Optional)</label>
             <input type="email" name="email" className="w-full border border-stone-300 rounded p-2 focus:ring focus:ring-rose-200" value={formData.email} onChange={handleChange} />

@@ -101,5 +101,24 @@
     "status": "pending_whatsapp_confirmation",
     "createdAt": "2026-10-10T18:51:09.523Z",
     "updatedAt": "2026-10-10T18:51:09.523Z"
+  },
+  {
+    "id": "ord_53d7azzjq",
+    "customerName": "akash gupta",
+    "customerMobile": "7400422743",
+    "items": [
+      {
+        "productId": "prod_brass001",
+        "productCode": "BRASS-001",
+        "productName": "Premium Golden Brass Diya",
+        "unitPrice": 699,
+        "quantity": 1,
+        "total": 699
+      }
+    ],
+    "total": 699,
+    "status": "pending_whatsapp_confirmation",
+    "createdAt": "2026-10-10T19:00:34.358Z",
+    "updatedAt": "2026-10-10T19:00:34.358Z"
   }
 ]
