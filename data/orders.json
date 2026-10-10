@@ -143,5 +143,63 @@
     "customerCity": "Bhayandar West",
     "customerState": "Maharashtra",
     "customerPincode": "401101"
+  },
+  {
+    "id": "ord_c9zfoo4ll",
+    "customerName": "akash gupta",
+    "customerMobile": "7400422743",
+    "customerEmail": "akashgupta2134@gmail.com",
+    "customerAddress": "Navghar Road\nIndira Market",
+    "customerCity": "Bhayandar West",
+    "customerState": "Maharashtra",
+    "customerPincode": "401101",
+    "orderNotes": "",
+    "items": [
+      {
+        "productId": "prod_terra001",
+        "productCode": "TERRA-001",
+        "productName": "Handmade Terracotta Rangoli Diya Set",
+        "unitPrice": 399,
+        "quantity": 1,
+        "total": 399
+      },
+      {
+        "productId": "prod_design001",
+        "productCode": "DSGN-001",
+        "productName": "Modern Glass & Gold Tealight Holders",
+        "unitPrice": 1299,
+        "quantity": 1,
+        "total": 1299
+      }
+    ],
+    "total": 1698,
+    "status": "pending_whatsapp_confirmation",
+    "createdAt": "2026-10-10T19:08:00.740Z",
+    "updatedAt": "2026-10-10T19:08:00.740Z"
+  },
+  {
+    "id": "ord_fggtww8ej",
+    "customerName": "akash gupta",
+    "customerMobile": "7400422743",
+    "customerEmail": "",
+    "customerAddress": "Shop No. 1, Girnar Dharshan, Narayan Nagar Road",
+    "customerCity": "Bhayandar West",
+    "customerState": "Maharashtra",
+    "customerPincode": "401101",
+    "orderNotes": "",
+    "items": [
+      {
+        "productId": "prod_terra001",
+        "productCode": "TERRA-001",
+        "productName": "Handmade Terracotta Rangoli Diya Set",
+        "unitPrice": 399,
+        "quantity": 1,
+        "total": 399
+      }
+    ],
+    "total": 399,
+    "status": "pending_whatsapp_confirmation",
+    "createdAt": "2026-10-10T19:08:34.187Z",
+    "updatedAt": "2026-10-10T19:08:34.187Z"
   }
 ]
