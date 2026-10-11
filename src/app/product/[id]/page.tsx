@@ -23,7 +23,14 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         
         {/* Right Side: Product Details */}
         <div>
-          <div className="text-sm text-stone-500 mb-2 font-mono tracking-wide">{product.productCode}</div>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-sm text-stone-500 font-mono tracking-wide">{product.productCode}</span>
+            {product.isNewArrival && (
+              <span className="bg-amber-500 text-white text-xs font-bold uppercase px-2 py-0.5 rounded shadow-sm">
+                New Arrival
+              </span>
+            )}
+          </div>
           <h1 className="text-3xl font-merriweather font-bold mb-4 text-stone-900">{product.name}</h1>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-3xl font-bold text-rose-900">₹{product.salePrice || product.price}</div>

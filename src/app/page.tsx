@@ -21,6 +21,11 @@ export default async function Home() {
             <div key={product.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col border border-stone-200">
               <Link href={'/product/' + (product.slug || product.id)} className="flex-1">
                 <div className="relative aspect-square bg-stone-100">
+                  {product.isNewArrival && (
+                    <span className="absolute top-2 left-2 z-10 bg-amber-500 text-white text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded shadow-sm">
+                      New Arrival
+                    </span>
+                  )}
                   {product.images && product.images.length > 0 && (
                     <img loading="lazy" src={product.images[0].url} alt={product.images[0].alt} className="object-cover w-full h-full" />
                   )}

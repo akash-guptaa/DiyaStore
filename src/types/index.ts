@@ -20,6 +20,7 @@ export interface Product {
   stockQuantity: number;
   status: 'draft' | 'published';
   featured: boolean;
+  isNewArrival?: boolean;
   createdAt: string;
   updatedAt: string;
 }
