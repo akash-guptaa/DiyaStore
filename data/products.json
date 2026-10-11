@@ -1,13 +1,13 @@
 [
   {
     "id": "prod_na_shubh_01",
-    "productCode": "NA-SHUBH-01",
+    "productCode": "001",
     "name": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
-    "slug": "auspicious-shubh-labh-door-hanging-diya-pair",
+    "slug": "auspicious-shubh-labh-handcrafted-door-hanging-diya-pair",
     "shortDescription": "Sacred Shubh-Labh clay hanging diyas with relief calligraphy and wall mounting loops.",
     "description": "Welcome Goddess Lakshmi and Lord Ganesha to your home with this sacred pair of Shubh-Labh hanging diyas. Handcrafted by master artisans from pure riverbed terracotta clay, each piece features high-relief Devanagari lettering, radiant sun-flame motifs, and durable metal hanging hooks. Can be hung at main doorways or placed flat on puja altars.",
-    "price": 399,
-    "salePrice": 299,
+    "price": 200,
+    "salePrice": 399,
     "categoryId": "terracotta",
     "images": [
       {
@@ -21,24 +21,6 @@
         "alt": "Shubh Labh Diya In-Hand View",
         "isMain": false,
         "sortOrder": 1
-      },
-      {
-        "url": "/uploads/shubh_labh_diya_3.jpg",
-        "alt": "Shubh Labh Diya Table Display",
-        "isMain": false,
-        "sortOrder": 2
-      },
-      {
-        "url": "/uploads/shubh_labh_diya_4.jpg",
-        "alt": "Shubh Labh Diya Top Angle",
-        "isMain": false,
-        "sortOrder": 3
-      },
-      {
-        "url": "/uploads/shubh_labh_diya_5.jpg",
-        "alt": "Shubh Labh Diya Side Profile",
-        "isMain": false,
-        "sortOrder": 4
       }
     ],
     "specifications": {
@@ -46,22 +28,22 @@
       "Material": "Terracotta Clay",
       "Mounting": "Wall Loop & Table Stand"
     },
-    "stockQuantity": 40,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T17:56:21.696Z"
   },
   {
     "id": "prod_na_peacock_02",
-    "productCode": "NA-PEACOCK-02",
+    "productCode": "002",
     "name": "Majestic Handcrafted Mayur 5-Wick Terracotta Rangoli Diya",
-    "slug": "majestic-handcrafted-mayur-5wick-terracotta-rangoli-diya",
+    "slug": "majestic-handcrafted-mayur-5-wick-terracotta-rangoli-diya",
     "shortDescription": "Magnificent peacock centerpiece diya with 5 flame wells and sparkling shisha mirrors.",
     "description": "An iconic Diwali showstopper. This sculptural terracotta diya represents Mayur (the royal peacock) with an upright hand-painted tail fan detailed in sapphire blue, emerald green, and gold glitter. Five generous oil wick chalices surround the front pedestal, casting a breathtaking semi-circle of light across your rangoli.",
-    "price": 599,
-    "salePrice": 449,
+    "price": 499,
+    "salePrice": 200,
     "categoryId": "terracotta",
     "images": [
       {
@@ -94,22 +76,22 @@
       "Material": "Terracotta Clay & Glass Mirrors",
       "Craft": "Hand-Sculpted & Painted"
     },
-    "stockQuantity": 30,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T17:55:04.410Z"
   },
   {
     "id": "prod_na_lotus_03",
-    "productCode": "NA-LOTUS-03",
+    "productCode": "003",
     "name": "Handmade Blooming Kamal Lotus Multi-Layered Terracotta Diya",
-    "slug": "handmade-blooming-kamal-lotus-multilayered-terracotta-diya",
+    "slug": "handmade-blooming-kamal-lotus-multi-layered-terracotta-diya",
     "shortDescription": "Sacred pink lotus diya with sculpted multi-tier petals and gold glitter highlights.",
     "description": "Inspired by the celestial seat of Goddess Lakshmi, this blooming lotus diya features intricately formed layered clay petals in radiant shades of rose pink, accented with golden outlines and a sparkling center gem. Perfect for floating flower bowls, mandir altars, and festive dining centerpieces.",
-    "price": 349,
-    "salePrice": 249,
+    "price": 200,
+    "salePrice": 349,
     "categoryId": "terracotta",
     "images": [
       {
@@ -136,22 +118,22 @@
       "Material": "Clay & Non-toxic Acrylic",
       "Diameter": "Approx 4.5 inches"
     },
-    "stockQuantity": 50,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T17:56:06.576Z"
   },
   {
     "id": "prod_na_thali_04",
-    "productCode": "NA-THALI-04",
+    "productCode": "04",
     "name": "Royal Crystal Kundan Embellished Puja Aarti Thali (Set of 5 Diyas)",
-    "slug": "royal-crystal-kundan-puja-aarti-thali-set-5-diyas",
+    "slug": "royal-crystal-kundan-embellished-puja-aarti-thali-set-of-5-diyas",
     "shortDescription": "Festive hot-pink brocade finished thali studded with crystals and 5 matching diyas.",
     "description": "Elevate your Diwali Lakshmi Puja with this luxurious handcrafted Aarti Thali. Wrapped in shimmering metallic fuchsia fabric with gold braided borders, it comes complete with five diamond-rhinestone encrusted earthen diyas. Shrink-wrapped for pristine gifting.",
-    "price": 699,
-    "salePrice": 499,
+    "price": 180,
+    "salePrice": 249,
     "categoryId": "designer",
     "images": [
       {
@@ -178,21 +160,21 @@
       "Diameter": "7.5 inches",
       "Finish": "Brocade & Rhinestones"
     },
-    "stockQuantity": 25,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T17:57:42.216Z"
   },
   {
     "id": "prod_na_charan_05",
     "productCode": "NA-CHARAN-05",
     "name": "Maa Lakshmi Sacred Charan Paduka with Swastik Pedestal Diya (Pair)",
-    "slug": "maa-lakshmi-charan-paduka-swastik-pedestal-diya-pair",
+    "slug": "maa-lakshmi-sacred-charan-paduka-with-swastik-pedestal-diya-pair",
     "shortDescription": "Auspicious Lakshmi Charan feet with sacred Swastik symbols and elevated chalice diyas.",
     "description": "Bring boundless good fortune and Lakshmiji blessings to your home. This sacred clay pair is hand-modeled in the divine likeness of Goddess Lakshmi’s auspicious feet, adorned with green glitter toe rings, sacred Swastik glyphs, and elevated flame pedestals. Placed by thresholds, rangolis, and lockers.",
-    "price": 399,
+    "price": 99,
     "salePrice": 299,
     "categoryId": "terracotta",
     "images": [
@@ -209,16 +191,28 @@
         "sortOrder": 1
       },
       {
-        "url": "/uploads/laxmi_charan_diya_3.jpg",
-        "alt": "Flat Lakshmi Charan Paduka Pair",
+        "url": "/uploads/1791741546967-WhatsApp-Image-2026-10-11-at-10.31.51-PM-(1).jpeg",
+        "alt": "Maa Lakshmi Sacred Charan Paduka with Swastik Pedestal Diya (Pair)",
         "isMain": false,
         "sortOrder": 2
       },
       {
-        "url": "/uploads/laxmi_charan_diya_4.jpg",
-        "alt": "Lakshmi Charan Hand Shot",
+        "url": "/uploads/1791741546970-WhatsApp-Image-2026-10-11-at-10.31.53-PM.jpeg",
+        "alt": "Maa Lakshmi Sacred Charan Paduka with Swastik Pedestal Diya (Pair)",
         "isMain": false,
         "sortOrder": 3
+      },
+      {
+        "url": "/uploads/1791741546973-WhatsApp-Image-2026-10-11-at-10.31.54-PM-(1).jpeg",
+        "alt": "Maa Lakshmi Sacred Charan Paduka with Swastik Pedestal Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 4
+      },
+      {
+        "url": "/uploads/1791741546975-WhatsApp-Image-2026-10-11-at-10.31.54-PM.jpeg",
+        "alt": "Maa Lakshmi Sacred Charan Paduka with Swastik Pedestal Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 5
       }
     ],
     "specifications": {
@@ -226,22 +220,22 @@
       "Quantity": "1 Pair (Left & Right)",
       "Material": "Clay"
     },
-    "stockQuantity": 45,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T17:59:07.045Z"
   },
   {
     "id": "prod_na_candle_06",
     "productCode": "NA-CANDLE-06",
     "name": "Shimmering Golden Glitter Matka Mombatti Candle Set (Pack of 6)",
-    "slug": "shimmering-golden-glitter-matka-mombatti-candle-pack-6",
+    "slug": "shimmering-golden-glitter-matka-mombatti-candle-set-pack-of-6",
     "shortDescription": "Ready-to-burn wax-filled earthen pot candles with sparkling gold finish in triangle pack.",
     "description": "Enjoy hassle-free festive lighting with our sparkling Matka Mombatti set. Six hand-painted red terracotta pots with white floral lace trim, filled with high-grade golden shimmer wax and smokeless cotton wicks. Burns steadily for over 6 hours without oil spillages.",
-    "price": 449,
-    "salePrice": 349,
+    "price": 180,
+    "salePrice": 299,
     "categoryId": "designer",
     "images": [
       {
@@ -251,16 +245,28 @@
         "sortOrder": 0
       },
       {
-        "url": "/uploads/glitter_matka_candle_2.jpg",
-        "alt": "Glitter Matka Candles Hand View",
+        "url": "/uploads/1791741624744-WhatsApp-Image-2026-10-11-at-10.33.15-PM-(1).jpeg",
+        "alt": "Shimmering Golden Glitter Matka Mombatti Candle Set (Pack of 6)",
         "isMain": false,
         "sortOrder": 1
       },
       {
-        "url": "/uploads/glitter_matka_candle_3.jpg",
-        "alt": "Traditional Matka Candles with Lace",
+        "url": "/uploads/1791741624747-WhatsApp-Image-2026-10-11-at-10.33.15-PM.jpeg",
+        "alt": "Shimmering Golden Glitter Matka Mombatti Candle Set (Pack of 6)",
         "isMain": false,
         "sortOrder": 2
+      },
+      {
+        "url": "/uploads/1791741624750-WhatsApp-Image-2026-10-11-at-10.33.16-PM-(1).jpeg",
+        "alt": "Shimmering Golden Glitter Matka Mombatti Candle Set (Pack of 6)",
+        "isMain": false,
+        "sortOrder": 3
+      },
+      {
+        "url": "/uploads/1791741624754-WhatsApp-Image-2026-10-11-at-10.33.16-PM.jpeg",
+        "alt": "Shimmering Golden Glitter Matka Mombatti Candle Set (Pack of 6)",
+        "isMain": false,
+        "sortOrder": 4
       }
     ],
     "specifications": {
@@ -268,22 +274,22 @@
       "Quantity": "Pack of 6",
       "Burn Time": "6+ Hours"
     },
-    "stockQuantity": 60,
+    "stockQuantity": 0,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T18:00:24.842Z"
   },
   {
     "id": "prod_na_box_07",
     "productCode": "NA-BOX-07",
     "name": "Heritage Vibrant Sunflower Hand-Painted Diya Gift Box (Set of 6)",
-    "slug": "heritage-sunflower-handpainted-diya-gift-box-6",
+    "slug": "heritage-vibrant-sunflower-hand-painted-diya-gift-box-set-of-6",
     "shortDescription": "Luxury boxed set of 6 sunflower rangoli clay diyas with central shisha mirrors.",
     "description": "An auspicious gift for Diwali. Encased in a sturdy compartment gift box, these six handcrafted terracotta diyas feature vibrant sunflower petal carvings painted in joyous yellow, pink, and emerald, centered around reflective glass mirrors for double illumination.",
-    "price": 499,
-    "salePrice": 399,
+    "price": 150,
+    "salePrice": 299,
     "categoryId": "terracotta",
     "images": [
       {
@@ -297,34 +303,28 @@
         "alt": "Sunflower Diya Gift Box Display",
         "isMain": false,
         "sortOrder": 1
-      },
-      {
-        "url": "/uploads/sunflower_diya_box_3.jpg",
-        "alt": "Sunflower Diya Box Angled Angle",
-        "isMain": false,
-        "sortOrder": 2
       }
     ],
     "specifications": {
       "Quantity": "Set of 6 Diyas in Window Gift Box",
       "Material": "Terracotta with Glass Mirror"
     },
-    "stockQuantity": 35,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T18:01:18.264Z"
   },
   {
     "id": "prod_na_box_08",
     "productCode": "NA-BOX-08",
     "name": "Royal Crimson Square Kundan Terracotta Diya Luxury Box (Set of 4)",
-    "slug": "royal-crimson-square-kundan-terracotta-diya-box-4",
+    "slug": "royal-crimson-square-kundan-terracotta-diya-luxury-box-set-of-4",
     "shortDescription": "Set of 4 square-profile deep reservoir clay diyas with kundan stones in a gold gift box.",
     "description": "Combining Mughal geometric artistry with Indian pottery traditions. These 4 square deep-dish diyas are finished in festive vermilion with white wave relief, green emerald accents, and sparkling rhinestones, presented in a satin-yellow partitioned box.",
-    "price": 449,
-    "salePrice": 349,
+    "price": 99,
+    "salePrice": 199,
     "categoryId": "designer",
     "images": [
       {
@@ -332,18 +332,6 @@
         "alt": "Square Kundan Diya Gift Box",
         "isMain": true,
         "sortOrder": 0
-      },
-      {
-        "url": "/uploads/crimson_square_box_2.jpg",
-        "alt": "Square Diya Box Side Profile",
-        "isMain": false,
-        "sortOrder": 1
-      },
-      {
-        "url": "/uploads/crimson_square_box_3.jpg",
-        "alt": "Square Diya Set Presentation Shot",
-        "isMain": false,
-        "sortOrder": 2
       }
     ],
     "specifications": {
@@ -351,12 +339,12 @@
       "Quantity": "4 Diyas in Box",
       "Material": "Clay"
     },
-    "stockQuantity": 35,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T18:01:46.751Z"
   },
   {
     "id": "prod_na_pack_09",
@@ -440,11 +428,11 @@
     "id": "prod_na_pack_11",
     "productCode": "NA-PACK-11",
     "name": "Glistening Magenta Kundan Floral Diya Pack (Set of 4)",
-    "slug": "glistening-magenta-kundan-floral-diya-pack-4",
+    "slug": "glistening-magenta-kundan-floral-diya-pack-set-of-4",
     "shortDescription": "Four hand-painted pink/magenta clay diyas with floral starlight petals and glass mirrors.",
     "description": "Brighten up every corner with these radiant magenta diyas. Featuring 8-pointed golden sunburst petals and delicate yellow scalloped rims, each diya holds ample oil for hours of festive celebration.",
-    "price": 299,
-    "salePrice": 219,
+    "price": 99,
+    "salePrice": 199,
     "categoryId": "terracotta",
     "images": [
       {
@@ -465,22 +453,22 @@
       "Material": "Earthen Clay",
       "Color": "Magenta & Sunshine Yellow"
     },
-    "stockQuantity": 65,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T18:02:04.767Z"
   },
   {
     "id": "prod_na_pack_12",
     "productCode": "NA-PACK-12",
     "name": "Traditional Golden Marigold Handcrafted Clay Diya Pack (Set of 4)",
-    "slug": "traditional-golden-marigold-clay-diya-pack-4",
+    "slug": "traditional-golden-marigold-handcrafted-clay-diya-pack-set-of-4",
     "shortDescription": "Earthy terracotta diyas with deep maroon base and marigold yellow petal rim.",
     "description": "An ode to traditional festive marigold garlands. Hand-molded with pointed flame spouts and decorated with authentic yellow-white accents and center mirrors for a truly traditional aesthetic.",
-    "price": 299,
-    "salePrice": 219,
+    "price": 99,
+    "salePrice": 199,
     "categoryId": "terracotta",
     "images": [
       {
@@ -500,17 +488,17 @@
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T18:02:21.155Z"
   },
   {
     "id": "prod_na_box_13",
     "productCode": "NA-BOX-13",
     "name": "Yellow Emerald Floral Terracotta Diya Luxury Gift Box (Set of 4)",
-    "slug": "yellow-emerald-floral-terracotta-diya-box-4",
+    "slug": "yellow-emerald-floral-terracotta-diya-luxury-gift-box-set-of-4",
     "shortDescription": "Artistic teardrop clay diyas with yellow sunray and studded green emerald rhinestones.",
     "description": "Designed as a premium gifting presentation, this yellow partition box holds four large curved petal diyas with two-tone yellow-pink backgrounds, beaded green glass jewels, and high-gloss glaze.",
-    "price": 449,
-    "salePrice": 349,
+    "price": 99,
+    "salePrice": 199,
     "categoryId": "designer",
     "images": [
       {
@@ -530,34 +518,28 @@
         "alt": "Yellow Emerald Diya In-Hand View",
         "isMain": false,
         "sortOrder": 2
-      },
-      {
-        "url": "/uploads/yellow_emerald_box_4.jpg",
-        "alt": "Yellow Emerald Diya Display Box",
-        "isMain": false,
-        "sortOrder": 3
       }
     ],
     "specifications": {
       "Quantity": "Set of 4 in Gift Box",
       "Material": "Terracotta Clay & Glass Rhinestones"
     },
-    "stockQuantity": 40,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
+    "updatedAt": "2026-10-11T18:02:53.070Z"
   },
   {
     "id": "prod_na_mitti_14",
     "productCode": "NA-MITTI-14",
     "name": "Eco-Friendly Traditional Mitti Pedestal Matka Diya (Set of 2)",
-    "slug": "ecofriendly-traditional-mitti-pedestal-matka-diya-set-2",
+    "slug": "eco-friendly-traditional-mitti-pedestal-matka-diya-set-of-2",
     "shortDescription": "Authentic 100% natural clay pedestal diyas for sacred daily puja rituals.",
     "description": "Hand-shaped from organic river clay on traditional potter wheels. Elevated pedestal stands keep table surfaces cool while the broad mouth holds mustard or sesame oil for long sacred burns.",
-    "price": 199,
-    "salePrice": 149,
+    "price": 49,
+    "salePrice": 99,
     "categoryId": "terracotta",
     "images": [
       {
@@ -565,495 +547,35 @@
         "alt": "Mitti Pedestal Matka Diya Pair",
         "isMain": true,
         "sortOrder": 0
+      },
+      {
+        "url": "/uploads/1791741829207-WhatsApp-Image-2026-10-11-at-10.31.49-PM.jpeg",
+        "alt": "Eco-Friendly Traditional Mitti Pedestal Matka Diya (Set of 2)",
+        "isMain": false,
+        "sortOrder": 1
+      },
+      {
+        "url": "/uploads/1791741829210-WhatsApp-Image-2026-10-11-at-10.31.50-PM.jpeg",
+        "alt": "Eco-Friendly Traditional Mitti Pedestal Matka Diya (Set of 2)",
+        "isMain": false,
+        "sortOrder": 2
+      },
+      {
+        "url": "/uploads/1791741829213-WhatsApp-Image-2026-10-11-at-10.31.51-PM.jpeg",
+        "alt": "Eco-Friendly Traditional Mitti Pedestal Matka Diya (Set of 2)",
+        "isMain": false,
+        "sortOrder": 3
       }
     ],
     "specifications": {
       "Quantity": "Set of 2",
       "Material": "100% Biodegradable Earthen Mitti"
     },
-    "stockQuantity": 100,
+    "stockQuantity": 10,
     "status": "published",
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:49:56.442Z"
-  },
-  {
-    "id": "prod_brass001",
-    "productCode": "BRASS-001",
-    "name": "Premium Golden Brass Diya",
-    "slug": "premium-golden-brass-diya",
-    "shortDescription": "A beautifully crafted traditional Indian brass diya glowing warmly in a festive setting.",
-    "description": "Experience the timeless elegance of this heavy-weight premium brass diya. Perfect for daily puja rituals or as a centerpiece for your festive decorations. Intricately carved by traditional artisans, this diya can hold enough oil to burn continuously for several hours.",
-    "price": 899,
-    "salePrice": 699,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Premium Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {},
-    "stockQuantity": 45,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-10T17:46:25.632Z",
-    "updatedAt": "2026-10-10T17:46:25.633Z"
-  },
-  {
-    "id": "prod_terra001",
-    "productCode": "TERRA-001",
-    "name": "Handmade Terracotta Rangoli Diya Set",
-    "slug": "handmade-terracotta-rangoli-diya-set",
-    "shortDescription": "A collection of beautiful handmade terracotta clay diyas, intricately painted with bright festive colors.",
-    "description": "Bring authentic Indian tradition to your doorstep with this vibrant set of hand-painted terracotta clay diyas. Each diya is individually crafted and embedded with small reflective mirrors that sparkle beautifully when lit. Perfect for Diwali and other major festivals.",
-    "price": 399,
-    "salePrice": null,
-    "categoryId": "terracotta",
-    "images": [
-      {
-        "url": "/uploads/terracotta_diya.jpg",
-        "alt": "Terracotta Diya Set",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {},
-    "stockQuantity": 120,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-10T17:46:25.633Z",
-    "updatedAt": "2026-10-10T17:46:25.633Z"
-  },
-  {
-    "id": "prod_design001",
-    "productCode": "DSGN-001",
-    "name": "Modern Glass & Gold Tealight Holders",
-    "slug": "modern-glass-gold-tealight-holders",
-    "shortDescription": "A set of modern elegant designer diyas made of gold-plated metal and glass.",
-    "description": "Blend tradition with contemporary luxury. These modern designer tealight holders are crafted with geometric gold-plated metal framing and clear glass panes. When lit, they cast a breathtaking warm geometric shadow across your living space. Ideal for luxury gifting.",
-    "price": 1499,
-    "salePrice": 1299,
-    "categoryId": "designer",
-    "images": [
-      {
-        "url": "/uploads/designer_diya_set.jpg",
-        "alt": "Designer Glass Tealight Holders",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {},
-    "stockQuantity": 25,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-10T17:46:25.633Z",
-    "updatedAt": "2026-10-10T17:46:25.633Z"
-  },
-  {
-    "id": "prod_peacock_01",
-    "productCode": "PCK-001",
-    "name": "Royal Mayur Handcrafted Brass Peacock Diya",
-    "slug": "royal-mayur-handcrafted-brass-peacock-diya",
-    "shortDescription": "Exquisitely sculpted pure brass peacock diya with detailed feather plume engraving.",
-    "description": "Embrace royal heritage with this majestic Mayur (Peacock) Deepam. Hand-cast by generational metal artisans in pure virgin brass, the detailed feathers and regal poise of the peacock elevate any puja alter, Diwali decor, or living room console. Designed for generous oil holding and a radiant steady flame.",
-    "price": 1299,
-    "salePrice": 999,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/peacock_brass_diya.jpg",
-        "alt": "Royal Mayur Brass Peacock Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Material": "Pure Brass",
-      "Finish": "Antique Golden",
-      "Weight": "480g"
-    },
-    "stockQuantity": 50,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_matka_candle_01",
-    "productCode": "MC-001",
-    "name": "Artisan Terracotta Matka Scented Candle",
-    "slug": "artisan-terracotta-matka-scented-candle",
-    "shortDescription": "Traditional hand-thrown clay pot filled with organic scented wax and dual wicks.",
-    "description": "Add earthy warmth to your celebrations with our authentic Matka Mombatti. Molded from riverbed terracotta clay and hand-painted with festive tribal motifs, each pot is hand-poured with natural slow-burning soy wax infused with delicate mogra and sandalwood fragrance.",
-    "price": 349,
-    "salePrice": 249,
-    "categoryId": "terracotta",
-    "images": [
-      {
-        "url": "/uploads/matka_wax_candle.jpg",
-        "alt": "Artisan Terracotta Matka Scented Candle",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Material": "Terracotta Clay & Natural Soy Wax",
-      "Burn Time": "12+ Hours"
-    },
-    "stockQuantity": 150,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_matka_candle_01",
-    "productCode": "PMC-001",
-    "name": "Imperial Shahi Zardozi Embellished Matka Candle",
-    "slug": "imperial-shahi-zardozi-embellished-matka-candle",
-    "shortDescription": "Luxury heirloom pot candle adorned with kundan gems, gold foil, and royal zardozi artistry.",
-    "description": "The pinnacle of festive grandeur. This premium matka candle is individually decorated with shimmering faux-kundan stones, gold filigree, and peacock enamel motifs. Filled with high-aroma rose and saffron beeswax blend for an unforgettable, opulent Diwali centerpiece.",
-    "price": 699,
-    "salePrice": 499,
-    "categoryId": "designer",
-    "images": [
-      {
-        "url": "/uploads/premium_matka_candle.jpg",
-        "alt": "Imperial Shahi Zardozi Matka Candle",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Material": "Clay, Kundan Stones, Scented Wax",
-      "Burn Time": "18+ Hours"
-    },
-    "stockQuantity": 80,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_matka_diya_01",
-    "productCode": "MD-001",
-    "name": "Traditional Hand-Painted Mitti Matka Diya (Set of 4)",
-    "slug": "traditional-hand-painted-mitti-matka-diya-set-4",
-    "shortDescription": "Classic miniature earthen pot oil diyas crafted with eco-friendly natural clay.",
-    "description": "Celebrate sacred traditions with our handcrafted Mitti Matka Diyas. Designed to hold mustard or sesame oil with cotton wicks, these charming pot-shaped diyas burn cleanly and stably outdoors or indoors, keeping Indian clay pottery heritage glowing bright.",
-    "price": 299,
-    "salePrice": 199,
-    "categoryId": "terracotta",
-    "images": [
-      {
-        "url": "/uploads/terracotta_diya.jpg",
-        "alt": "Traditional Hand-Painted Mitti Matka Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Material": "Natural Mitti Clay",
-      "Set Quantity": "Pack of 4"
-    },
-    "stockQuantity": 200,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_lotus_diya_01",
-    "productCode": "LTS-001",
-    "name": "Divine Blooming Kamal Lotus Brass Diya",
-    "slug": "divine-blooming-kamal-lotus-brass-diya",
-    "shortDescription": "Elegantly sculpted multilayered lotus flower diya symbolizing purity, wealth, and prosperity.",
-    "description": "Dedicated to Goddess Lakshmi, this divine Kamal Deepam is sculpted in blooming layered petals that cradle sacred oil and wick. The polished brass surface reflects the flame into a mesmerizing golden halo that enriches your mandir and festival entryway.",
-    "price": 899,
-    "salePrice": 649,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Divine Blooming Lotus Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Material": "Solid Brass",
-      "Diameter": "4.5 inches",
-      "Finish": "Lustrous Gold"
-    },
-    "stockQuantity": 75,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d1",
-    "productCode": "PRM-D01",
-    "name": "Imperial Ashtalakshmi Antique Brass Diya (Design 1)",
-    "slug": "imperial-ashtalakshmi-antique-brass-diya-design-1",
-    "shortDescription": "Sacred eight-fold Lakshmi embossed heavy brass deepam for divine blessings and abundance.",
-    "description": "Design 1 of our Signature Premium Series. Featuring the eight divine manifestations of Goddess Lakshmi embossed around the polished oil reservoir, finished with a classic temple finial.",
-    "price": 1599,
-    "salePrice": 1299,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Imperial Ashtalakshmi Antique Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "1: Ashtalakshmi Embossed",
-      "Material": "Heavy Cast Brass",
-      "Height": "6 inches"
-    },
-    "stockQuantity": 40,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d2",
-    "productCode": "PRM-D02",
-    "name": "Heritage Royal Peacock Multi-Tier Vilakku Diya (Design 2)",
-    "slug": "heritage-royal-peacock-multi-tier-vilakku-diya-design-2",
-    "shortDescription": "Grand South Indian style standing deepam crowned with a dancing peacock crest.",
-    "description": "Design 2 of our Signature Premium Series. An iconic tiered vilakku with five flame notches, crowned with a sculpted dancing peacock that radiates classic temple opulence.",
-    "price": 1799,
-    "salePrice": 1449,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Heritage Royal Peacock Multi-Tier Vilakku Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "2: Peacock Vilakku",
-      "Material": "Solid Polished Brass",
-      "Wicks": "5 Notches"
-    },
-    "stockQuantity": 35,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d3",
-    "productCode": "PRM-D03",
-    "name": "Vintage Hanging Bell Chain Brass Diya (Design 3)",
-    "slug": "vintage-hanging-bell-chain-brass-diya-design-3",
-    "shortDescription": "Traditional hanging deepam suspended from an ornate brass link chain with sonic ghungroo bells.",
-    "description": "Design 3 of our Signature Premium Series. Designed for doorways and mandir ceilings, this suspended diya tinkles gently with chiming temple bells whenever a breeze passes.",
-    "price": 1399,
-    "salePrice": 1099,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Vintage Hanging Bell Chain Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "3: Hanging Chain & Bell",
-      "Chain Length": "18 inches",
-      "Material": "Brass"
-    },
-    "stockQuantity": 30,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d4",
-    "productCode": "PRM-D04",
-    "name": "Celestial Surya Akhand Brass Diya with Borosilicate Glass (Design 4)",
-    "slug": "celestial-surya-akhand-brass-diya-glass-design-4",
-    "shortDescription": "Windproof 24-hour Akhand Jyoti deepam shielded with heat-resistant cylindrical glass chimney.",
-    "description": "Design 4 of our Signature Premium Series. Features sun-ray filigree cutwork base and premium borosilicate glass casing to keep your sacred flame burning continuously day and night.",
-    "price": 1499,
-    "salePrice": 1199,
-    "categoryId": "designer",
-    "images": [
-      {
-        "url": "/uploads/designer_diya_set.jpg",
-        "alt": "Celestial Surya Akhand Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "4: Akhand Jyoti Glass Shield",
-      "Glass": "High Thermal Borosilicate",
-      "Base": "Brass"
-    },
-    "stockQuantity": 45,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d5",
-    "productCode": "PRM-D05",
-    "name": "Gilded Royal Aarti Deepam with Rosewood Carved Handle (Design 5)",
-    "slug": "gilded-royal-aarti-deepam-rosewood-handle-design-5",
-    "shortDescription": "Ceremonial Pancha Aarti lamp with multi-step flame wells and ergonomic heat-safe wooden handle.",
-    "description": "Design 5 of our Signature Premium Series. Built specifically for morning and evening aarti rituals, featuring 5 sacred wicks, camphor burner tray, and a balanced polished wooden handle.",
-    "price": 1299,
-    "salePrice": 949,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Gilded Royal Aarti Deepam",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "5: Pancha Aarti Handle",
-      "Handle": "Insulated Rosewood",
-      "Material": "Brass"
-    },
-    "stockQuantity": 50,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d6",
-    "productCode": "PRM-D06",
-    "name": "Sacred Kurma Avatar Tortoise Brass Diya (Design 6)",
-    "slug": "sacred-kurma-avatar-tortoise-brass-diya-design-6",
-    "shortDescription": "Vastu-energized brass deepam resting on a finely carved tortoise (Kurma) base for stability.",
-    "description": "Design 6 of our Signature Premium Series. The sacred tortoise base anchors positive spiritual energy and prosperity according to Vastu Shastra while holding a sparkling oil flame.",
-    "price": 1199,
-    "salePrice": 899,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Sacred Kurma Tortoise Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "6: Kurma Tortoise Base",
-      "Significance": "Vastu & Prosperity",
-      "Material": "Brass"
-    },
-    "stockQuantity": 60,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d7",
-    "productCode": "PRM-D07",
-    "name": "Ornate Shankh & Chakra Divine Brass Diya (Design 7)",
-    "slug": "ornate-shankh-chakra-divine-brass-diya-design-7",
-    "shortDescription": "Vaishnavite ceremonial lamp flanked by the sacred conch shell (Shankh) and Sudarshana Chakra.",
-    "description": "Design 7 of our Signature Premium Series. Carved with divine emblems of Lord Vishnu, this exquisite deepam brings cosmic peace and spiritual protection to your household altar.",
-    "price": 1399,
-    "salePrice": 1049,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Ornate Shankh Chakra Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "7: Shankh Chakra Motifs",
-      "Material": "Antiqued Brass",
-      "Weight": "520g"
-    },
-    "stockQuantity": 40,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_prem_diya_d8",
-    "productCode": "PRM-D08",
-    "name": "Filigree Jali Cutwork Moroccan-Style Brass Lantern Diya (Design 8)",
-    "slug": "filigree-jali-cutwork-lantern-brass-diya-design-8",
-    "shortDescription": "Intricate pierced lattice-work lantern diya casting dramatic floral kaleidoscope shadows.",
-    "description": "Design 8 of our Signature Premium Series. Hand-pierced metal lattice walls scatter glowing shadow patterns across walls and tables, blending palace architecture with festival cheer.",
-    "price": 1699,
-    "salePrice": 1349,
-    "categoryId": "designer",
-    "images": [
-      {
-        "url": "/uploads/designer_diya_set.jpg",
-        "alt": "Filigree Cutwork Lantern Brass Diya",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Design Variant": "8: Filigree Jali Cutwork",
-      "Finish": "Matte Gold",
-      "Lighting": "Oil or Tealight"
-    },
-    "stockQuantity": 30,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
-  },
-  {
-    "id": "prod_swastik_diya_01",
-    "productCode": "SWS-001",
-    "name": "Auspicious Swastika Shubh Deepam in Pure Brass",
-    "slug": "auspicious-swastika-shubh-deepam-pure-brass",
-    "shortDescription": "Sacred Swastik engraved brass diya invoking peace, good fortune, and warding off negative energy.",
-    "description": "The ancient symbol of auspiciousness and cosmic harmony. This sacred Swastika Shubh Deepam is carved with four sacred wick corners and Shubh-Labh blessings. A must-have for Griha Pravesh, Diwali Lakshmi Puja, and new beginnings.",
-    "price": 799,
-    "salePrice": 599,
-    "categoryId": "brass",
-    "images": [
-      {
-        "url": "/uploads/premium_brass_diya.jpg",
-        "alt": "Auspicious Swastika Shubh Deepam",
-        "isMain": true,
-        "sortOrder": 0
-      }
-    ],
-    "specifications": {
-      "Symbolism": "Shubh & Labh Swastik",
-      "Material": "Solid Brass",
-      "Wicks": "4 Directional Wells"
-    },
-    "stockQuantity": 90,
-    "status": "published",
-    "featured": true,
-    "createdAt": "2026-10-11T16:31:07.269Z",
-    "updatedAt": "2026-10-11T16:31:07.269Z"
+    "updatedAt": "2026-10-11T18:03:49.292Z"
   }
 ]
