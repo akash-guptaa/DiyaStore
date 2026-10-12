@@ -11,16 +11,46 @@
     "categoryId": "terracotta",
     "images": [
       {
-        "url": "/uploads/shubh_labh_diya_1.jpg",
-        "alt": "Shubh Labh Hanging Diya Front View",
-        "isMain": true,
-        "sortOrder": 0
+        "url": "/uploads/1791742281683-WhatsApp-Image-2026-10-11-at-10.31.55-PM.jpeg",
+        "alt": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 2
       },
       {
-        "url": "/uploads/shubh_labh_diya_2.jpg",
-        "alt": "Shubh Labh Diya In-Hand View",
+        "url": "/uploads/1791742281688-WhatsApp-Image-2026-10-11-at-10.31.56-PM-(1).jpeg",
+        "alt": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
         "isMain": false,
-        "sortOrder": 1
+        "sortOrder": 3
+      },
+      {
+        "url": "/uploads/1791742281693-WhatsApp-Image-2026-10-11-at-10.31.56-PM.jpeg",
+        "alt": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 4
+      },
+      {
+        "url": "/uploads/1791742281697-WhatsApp-Image-2026-10-11-at-10.31.57-PM.jpeg",
+        "alt": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 5
+      },
+      {
+        "url": "/uploads/1791742281702-WhatsApp-Image-2026-10-11-at-10.31.58-PM-(1).jpeg",
+        "alt": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 6
+      },
+      {
+        "url": "/uploads/1791742281708-WhatsApp-Image-2026-10-11-at-10.31.58-PM.jpeg",
+        "alt": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 7
+      },
+      {
+        "url": "/uploads/1791742281720-WhatsApp-Image-2026-10-11-at-10.31.59-PM.jpeg",
+        "alt": "Auspicious Shubh Labh Handcrafted Door Hanging Diya (Pair)",
+        "isMain": false,
+        "sortOrder": 9
       }
     ],
     "specifications": {
@@ -33,7 +63,7 @@
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T17:56:21.696Z"
+    "updatedAt": "2026-10-11T18:11:53.566Z"
   },
   {
     "id": "prod_na_peacock_02",
