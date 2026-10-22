@@ -38,7 +38,7 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
 
     try {
       const { default: jsPDF } = await import('jspdf');
-      const { default: html2canvas } = await import('html2canvas');
+      const { toJpeg } = await import('html-to-image');
 
       const pageElements = catalogueContainerRef.current.querySelectorAll<HTMLElement>('.catalogue-page');
       if (pageElements.length === 0) {
@@ -57,17 +57,14 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
         setProgressMsg(`Rendering page ${i + 1} of ${pageElements.length}...`);
         const pageEl = pageElements[i];
 
-        // Capture page as high-resolution canvas
-        const canvas = await html2canvas(pageEl, {
-          scale: 2, // 2x for sharp 300dpi-like clarity
-          useCORS: true,
-          allowTaint: true,
+        // Capture page as high-resolution JPEG via native browser foreignObject renderer
+        // Bypasses html2canvas CSS parsing crashes on modern Tailwind v4 lab()/oklch() color formats
+        const imgData = await toJpeg(pageEl, {
+          quality: 0.95,
+          pixelRatio: 2,
           backgroundColor: '#FAF7F2',
-          logging: false,
-          windowWidth: 1200,
+          cacheBust: false,
         });
-
-        const imgData = canvas.toDataURL('image/jpeg', 0.95);
 
         if (i > 0) {
           pdf.addPage('a4', 'portrait');
