@@ -6,7 +6,7 @@
   --color-brand-maroon: #7b2c2c;
   --color-brand-maroon-dark: #5c1f1f;
   --color-brand-saffron: #d97746;
-  --color-brand-terracotta: #c25f3f;
+  --color-brand-terracotta: #8c432c;
   --color-brand-gold: #c5a975;
   --color-brand-dark: #2c2420;
 }
@@ -15,5 +15,34 @@
   body {
     background-color: var(--color-brand-cream);
     color: var(--color-brand-dark);
+  }
+}
+
+/* Print & PDF Catalogue Styles */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #FAF7F2 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .catalogue-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+    background-color: #FAF7F2 !important;
   }
 }

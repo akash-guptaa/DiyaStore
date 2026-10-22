@@ -5,7 +5,7 @@ export default async function Footer() {
   const settings = await getSettings();
 
   return (
-    <footer className="bg-stone-900 text-stone-200 pt-16 pb-8 border-t-4 border-rose-900 mt-auto">
+    <footer className="print:hidden bg-stone-900 text-stone-200 pt-16 pb-8 border-t-4 border-rose-900 mt-auto">
       <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         <div>
           <h3 className="font-merriweather text-2xl font-bold text-white mb-4">{settings.storeName || 'Diya Store'}</h3>
@@ -18,6 +18,7 @@ export default async function Footer() {
           <h4 className="font-bold text-white mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
           <ul className="space-y-2">
             <li><Link href="/" className="text-stone-400 hover:text-white transition-colors">Shop All Products</Link></li>
+            <li><Link href="/catalogue" className="text-amber-400 hover:text-amber-300 transition-colors font-semibold flex items-center gap-1.5">📖 Product Catalogue PDF</Link></li>
             <li><Link href="/profile" className="text-stone-400 hover:text-white transition-colors">My Profile & Orders</Link></li>
             <li><Link href="/cart" className="text-stone-400 hover:text-white transition-colors">Shopping Cart</Link></li>
             <li><Link href="/admin" className="text-stone-400 hover:text-white transition-colors">Admin Dashboard</Link></li>

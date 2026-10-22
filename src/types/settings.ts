@@ -9,3 +9,5 @@ export interface StoreSettings {
   autoSlideDelay: number;
   mapLocationUrl?: string;
 }
+
+export type Settings = StoreSettings;

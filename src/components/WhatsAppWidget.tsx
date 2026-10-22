@@ -22,7 +22,7 @@ export default function WhatsAppWidget() {
   const bubbleClass = 'transition-all duration-500 transform origin-bottom-left ' + (showGreeting ? 'scale-100 opacity-100' : 'scale-0 opacity-0');
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 flex items-end gap-3">
+    <div className="print:hidden fixed bottom-6 left-6 z-50 flex items-end gap-3">
       
       {/* WhatsApp Button */}
       <a 

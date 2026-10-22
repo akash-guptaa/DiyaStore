@@ -13,16 +13,35 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
   };
 
   return (
-    <header className="flex justify-between items-center p-4 md:px-8 border-b border-stone-200 bg-white sticky top-0 z-50">
-      <Link href="/" className="flex items-center gap-3">
-        <div className="w-10 h-10 overflow-hidden rounded-full border border-stone-200 shadow-sm flex items-center justify-center bg-white">
-          <Image src="/logo.jpg" alt="Diya Store Logo" width={40} height={40} className="object-cover scale-[1.3]" />
-        </div>
-        <span className="font-merriweather font-bold text-2xl text-rose-900">Diya Store</span>
-      </Link>
+    <header className="print:hidden flex justify-between items-center p-3 md:py-4 md:px-8 border-b border-stone-200 bg-white sticky top-0 z-50">
+      <div className="flex items-center gap-3 md:gap-5">
+        <Link href="/" className="flex items-center gap-2 md:gap-3">
+          <div className="w-10 h-10 overflow-hidden rounded-full border border-stone-200 shadow-sm flex items-center justify-center bg-white flex-shrink-0">
+            <Image src="/logo.jpg" alt="Diya Store Logo" width={40} height={40} className="object-cover scale-[1.3]" />
+          </div>
+          <span className="font-merriweather font-bold text-xl md:text-2xl text-rose-900 whitespace-nowrap">Diya Store</span>
+        </Link>
+
+        {/* Catalogue Button on Left Side of Header */}
+        <Link
+          href="/catalogue"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100 hover:border-amber-400 transition-all shadow-sm"
+          title="Browse & Download Product Catalogue PDF"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-800">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          <span className="hidden sm:inline">PDF</span>
+          <span>Catalogue</span>
+        </Link>
+      </div>
       
       <nav className="hidden md:flex gap-6 items-center">
         <Link href="/" className="font-medium hover:text-rose-900">Products</Link>
+        <Link href="/catalogue" className="font-medium text-amber-900 hover:text-rose-900 flex items-center gap-1 font-semibold">
+          <span>Catalogue</span>
+        </Link>
         
         {isAdmin && (
           <>
@@ -33,7 +52,7 @@ export default function Header({ isAdmin = false }: { isAdmin?: boolean }) {
         )}
       </nav>
       
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-3 md:gap-4 items-center">
         <Link href="/profile" className="text-stone-700 hover:text-rose-900 transition-colors p-2 rounded-full hover:bg-stone-100" title="My Profile">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
