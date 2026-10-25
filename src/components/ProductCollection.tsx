@@ -14,7 +14,7 @@ export default function ProductCollection({ products }: ProductCollectionProps) 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [itemsPerPage, setItemsPerPage] = useState<number>(12);
+  const [itemsPerPage, setItemsPerPage] = useState<number>(48);
 
   // Extract unique categories
   const categories = useMemo(() => {

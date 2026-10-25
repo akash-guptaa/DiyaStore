@@ -6,5 +6,7 @@
   "heroHeadline": "Light Up Every Moment.",
   "heroSubtitle": "Discover beautiful diyas that bring warmth, tradition, and elegance to every celebration.",
   "heroButtonText": "Shop Now",
-  "autoSlideDelay": "4500"
+  "autoSlideDelay": "4500",
+  "mapLocationUrl": "https://maps.app.goo.gl/RKAF5cEqpZuYQtny9?g_st=aw",
+  "inventoryPin": "4321"
 }
