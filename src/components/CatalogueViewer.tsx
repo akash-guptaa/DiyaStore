@@ -58,12 +58,30 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
         const pageEl = pageElements[i];
 
         // Capture page as high-resolution JPEG via native browser foreignObject renderer
-        // Bypasses html2canvas CSS parsing crashes on modern Tailwind v4 lab()/oklch() color formats
+        // Force exact 794x1123 A4 dimensions and zero out all browser margin offsets
         const imgData = await toJpeg(pageEl, {
           quality: 0.95,
           pixelRatio: 2,
           backgroundColor: '#FAF7F2',
           cacheBust: false,
+          width: 794,
+          height: 1123,
+          style: {
+            margin: '0',
+            marginLeft: '0',
+            marginRight: '0',
+            marginTop: '0',
+            marginBottom: '0',
+            left: '0',
+            top: '0',
+            transform: 'none',
+            width: '794px',
+            height: '1123px',
+            minWidth: '794px',
+            maxWidth: '794px',
+            minHeight: '1123px',
+            maxHeight: '1123px',
+          },
         });
 
         if (i > 0) {
@@ -168,150 +186,160 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
         {/* =========================================================================
             PAGE 1: COVER PAGE (Exact match to Reference PDF Page 1)
         ========================================================================= */}
-        <section className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative w-full md:w-[210mm] min-h-[297mm] h-[297mm] p-6 md:p-[20mm] flex flex-col justify-between shadow-2xl mx-auto border border-[#E8E0D5] box-border overflow-hidden">
-          {/* Top Running Header */}
-          <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
-            <span>DIYA STORE • HANDMADE WITH LOVE</span>
-            <span className="font-mono font-semibold">01</span>
-          </div>
-
-          {/* Main Title Block */}
-          <div className="text-center pt-4 md:pt-8">
-            <h1 className="font-merriweather font-bold text-2xl md:text-4xl text-[#8C432C] tracking-[0.18em] uppercase mb-2">
-              THE DIYA COLLECTION
-            </h1>
-            <p className="font-serif italic text-xs md:text-sm text-[#705B53] tracking-wide">
-              Thoughtfully handcrafted diyas for meaningful moments
-            </p>
-          </div>
-
-          {/* Central Oval / Arch Medallion (Exact match to Reference PDF emblem) */}
-          <div className="my-auto flex items-center justify-center py-6">
-            <div className="bg-[#FAF2E8] p-6 md:p-10 rounded-sm border border-[#E8DEC9] shadow-inner flex items-center justify-center w-full max-w-sm">
-              <div className="bg-[#8C432C] text-[#FAF7F2] w-56 md:w-64 h-76 md:h-88 rounded-[120px] md:rounded-[140px] border-2 border-white/40 flex flex-col items-center justify-center p-6 text-center shadow-md relative">
-                {/* Botanical & Diya Motif */}
-                <div className="mb-2 text-amber-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2c.5 2 2 3.5 2 5.5 0 2-1 3.5-2 3.5s-2-1.5-2-3.5c0-2 1.5-3.5 2-5.5z" fill="#FDE68A" stroke="#F59E0B" />
-                    <path d="M4 14c0 4 3.5 7 8 7s8-3 8-7H4z" fill="#FDE68A" stroke="#F59E0B" />
-                    <path d="M2 14h20" stroke="#FDE68A" />
-                  </svg>
-                </div>
-
-                <div className="font-merriweather italic text-2xl md:text-3xl text-amber-100 font-bold tracking-wide">
-                  Diya Store
-                </div>
-                
-                <div className="text-[9px] md:text-[10px] tracking-[0.28em] uppercase text-amber-200/90 font-medium mt-1">
-                  HANDMADE WITH LOVE
-                </div>
-
-                <div className="text-xs text-amber-200 my-2">♥</div>
-
-                <div className="text-[9px] md:text-[10px] tracking-[0.25em] uppercase text-amber-100 font-semibold mt-1">
-                  PURE • ECO FRIENDLY • PRESENT
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Callout & Sub-title */}
-          <div className="text-center pb-2">
-            <p className="font-serif text-xs md:text-sm text-[#5A4D46] font-medium leading-relaxed">
-              Warm light. Thoughtful details. Made to be gifted, displayed, and enjoyed.
-            </p>
-            <p className="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-[#8C432C] font-bold mt-2">
-              DIYA STORE • HANDMADE WITH LOVE
-            </p>
-          </div>
-
-          {/* Bottom Rule & Page Footer */}
-          <div>
-            <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
-            <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+        <div className="flex justify-center w-full print:block">
+          <section 
+            className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative flex flex-col justify-between shadow-2xl border border-[#E8E0D5] box-border overflow-hidden flex-shrink-0"
+            style={{ width: '794px', height: '1123px', minHeight: '1123px', maxHeight: '1123px', margin: 0, padding: '48px 56px', boxSizing: 'border-box' }}
+          >
+            {/* Top Running Header */}
+            <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
               <span>DIYA STORE • HANDMADE WITH LOVE</span>
               <span className="font-mono font-semibold">01</span>
             </div>
-          </div>
-        </section>
+
+            {/* Main Title Block */}
+            <div className="text-center pt-6">
+              <h1 className="font-merriweather font-bold text-3xl text-[#8C432C] tracking-[0.18em] uppercase mb-2">
+                THE DIYA COLLECTION
+              </h1>
+              <p className="font-serif italic text-sm text-[#705B53] tracking-wide">
+                Thoughtfully handcrafted diyas for meaningful moments
+              </p>
+            </div>
+
+            {/* Central Oval / Arch Medallion (Exact match to Reference PDF emblem) */}
+            <div className="my-auto flex items-center justify-center py-4">
+              <div className="bg-[#FAF2E8] p-8 rounded-sm border border-[#E8DEC9] shadow-inner flex items-center justify-center w-full max-w-sm">
+                <div className="bg-[#8C432C] text-[#FAF7F2] w-64 h-84 rounded-[140px] border-2 border-white/40 flex flex-col items-center justify-center p-6 text-center shadow-md relative">
+                  {/* Botanical & Diya Motif */}
+                  <div className="mb-2 text-amber-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2c.5 2 2 3.5 2 5.5 0 2-1 3.5-2 3.5s-2-1.5-2-3.5c0-2 1.5-3.5 2-5.5z" fill="#FDE68A" stroke="#F59E0B" />
+                      <path d="M4 14c0 4 3.5 7 8 7s8-3 8-7H4z" fill="#FDE68A" stroke="#F59E0B" />
+                      <path d="M2 14h20" stroke="#FDE68A" />
+                    </svg>
+                  </div>
+
+                  <div className="font-merriweather italic text-3xl text-amber-100 font-bold tracking-wide">
+                    Diya Store
+                  </div>
+                  
+                  <div className="text-[10px] tracking-[0.28em] uppercase text-amber-200/90 font-medium mt-1">
+                    HANDMADE WITH LOVE
+                  </div>
+
+                  <div className="text-xs text-amber-200 my-2">♥</div>
+
+                  <div className="text-[10px] tracking-[0.25em] uppercase text-amber-100 font-semibold mt-1">
+                    PURE • ECO FRIENDLY • PRESENT
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Callout & Sub-title */}
+            <div className="text-center pb-2">
+              <p className="font-serif text-sm text-[#5A4D46] font-medium leading-relaxed">
+                Warm light. Thoughtful details. Made to be gifted, displayed, and enjoyed.
+              </p>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-[#8C432C] font-bold mt-2">
+                DIYA STORE • HANDMADE WITH LOVE
+              </p>
+            </div>
+
+            {/* Bottom Rule & Page Footer */}
+            <div>
+              <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
+              <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+                <span>DIYA STORE • HANDMADE WITH LOVE</span>
+                <span className="font-mono font-semibold">01</span>
+              </div>
+            </div>
+          </section>
+        </div>
 
 
         {/* =========================================================================
             PAGE 2: MEET THE ARTISANS / OUR STORY (Exact match to Reference PDF Page 2)
         ========================================================================= */}
-        <section className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative w-full md:w-[210mm] min-h-[297mm] h-[297mm] p-6 md:p-[20mm] flex flex-col justify-between shadow-2xl mx-auto border border-[#E8E0D5] box-border overflow-hidden">
-          {/* Top Running Header */}
-          <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
-            <span>DIYA STORE • HANDMADE WITH LOVE</span>
-            <span className="font-mono font-semibold">02</span>
-          </div>
-
-          <div className="my-auto">
-            <h2 className="font-merriweather font-bold text-2xl md:text-3xl text-[#8C432C] mb-4">
-              Meet the Artisans
-            </h2>
-
-            {/* Framed Container with Outer Border (matches Page 2 box) */}
-            <div className="border-[1.5px] border-[#8C432C]/70 bg-[#FDFCFA] p-6 md:p-8 rounded-sm grid grid-cols-1 md:grid-cols-12 gap-6 shadow-sm">
-              
-              {/* Left Column: Portrait / Workshop Image */}
-              <div className="md:col-span-5 flex flex-col justify-center">
-                <div className="aspect-[3/4] w-full overflow-hidden rounded bg-stone-100 border border-[#E3D8CC] shadow-inner">
-                  <img 
-                    src="/uploads/terracotta_diya.jpg" 
-                    alt="Artisan Craftsmanship" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Right Column: Artisan Story & Details */}
-              <div className="md:col-span-7 flex flex-col justify-between space-y-4">
-                <div>
-                  <h3 className="font-merriweather font-bold text-2xl text-[#8C432C]">
-                    Akash & Artisans
-                  </h3>
-                  <div className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-[#705B53] uppercase mt-0.5 mb-4">
-                    FOUNDER & ARTISANS, DIYA STORE
-                  </div>
-
-                  <div className="space-y-3 text-xs md:text-sm text-[#4A3E39] leading-relaxed">
-                    <p>
-                      At Diya Store, we are guided by a deep love for thoughtful design, authentic Indian craftsmanship, and the small details that make a gift feel truly personal. Every diya in our collection brings together sacred temple forms, sculptural silhouettes, and classic earthen styles.
-                    </p>
-                    <p>
-                      From statement peacock deepams to multi-layered lotus lamps and hand-poured matka mombattis, our handcrafted collection offers pieces crafted to add warmth and auspicious character to everyday spaces, Diwali festivities, and memorable gifting.
-                    </p>
-                  </div>
-
-                  {/* Quote */}
-                  <blockquote className="my-4 pl-3 border-l-2 border-[#8C432C] italic text-xs md:text-sm text-[#5A4D46]">
-                    “A little detail can turn an everyday moment into something memorable.”
-                  </blockquote>
-                </div>
-
-                {/* Bottom Highlight Box: Our Design Approach */}
-                <div className="pt-3 border-t border-[#E8DEC9]">
-                  <div className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase text-[#8C432C] mb-1">
-                    OUR DESIGN APPROACH
-                  </div>
-                  <div className="text-[11px] md:text-xs text-[#5A4D46] font-medium">
-                    Traditional craft • Warm earthy tones • Decorative silhouettes • Thoughtful gifting
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Rule & Page Footer */}
-          <div>
-            <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
-            <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+        <div className="flex justify-center w-full print:block">
+          <section 
+            className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative flex flex-col justify-between shadow-2xl border border-[#E8E0D5] box-border overflow-hidden flex-shrink-0"
+            style={{ width: '794px', height: '1123px', minHeight: '1123px', maxHeight: '1123px', margin: 0, padding: '48px 56px', boxSizing: 'border-box' }}
+          >
+            {/* Top Running Header */}
+            <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
               <span>DIYA STORE • HANDMADE WITH LOVE</span>
               <span className="font-mono font-semibold">02</span>
             </div>
-          </div>
-        </section>
+
+            <div className="my-auto">
+              <h2 className="font-merriweather font-bold text-3xl text-[#8C432C] mb-4">
+                Meet the Artisans
+              </h2>
+
+              {/* Framed Container with Outer Border (matches Page 2 box) */}
+              <div className="border-[1.5px] border-[#8C432C]/70 bg-[#FDFCFA] p-8 rounded-sm grid grid-cols-12 gap-6 shadow-sm">
+                
+                {/* Left Column: Portrait / Workshop Image */}
+                <div className="col-span-5 flex flex-col justify-center">
+                  <div className="aspect-[3/4] w-full overflow-hidden rounded bg-stone-100 border border-[#E3D8CC] shadow-inner">
+                    <img 
+                      src="/uploads/terracotta_diya.jpg" 
+                      alt="Artisan Craftsmanship" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Right Column: Artisan Story & Details */}
+                <div className="col-span-7 flex flex-col justify-between space-y-4">
+                  <div>
+                    <h3 className="font-merriweather font-bold text-2xl text-[#8C432C]">
+                      Akash & Artisans
+                    </h3>
+                    <div className="text-[11px] font-bold tracking-[0.2em] text-[#705B53] uppercase mt-0.5 mb-4">
+                      FOUNDER & ARTISANS, DIYA STORE
+                    </div>
+
+                    <div className="space-y-3 text-xs text-[#4A3E39] leading-relaxed">
+                      <p>
+                        At Diya Store, we are guided by a deep love for thoughtful design, authentic Indian craftsmanship, and the small details that make a gift feel truly personal. Every diya in our collection brings together sacred temple forms, sculptural silhouettes, and classic earthen styles.
+                      </p>
+                      <p>
+                        From statement peacock deepams to multi-layered lotus lamps and hand-poured matka mombattis, our handcrafted collection offers pieces crafted to add warmth and auspicious character to everyday spaces, Diwali festivities, and memorable gifting.
+                      </p>
+                    </div>
+
+                    {/* Quote */}
+                    <blockquote className="my-3 pl-3 border-l-2 border-[#8C432C] italic text-xs text-[#5A4D46]">
+                      “A little detail can turn an everyday moment into something memorable.”
+                    </blockquote>
+                  </div>
+
+                  {/* Bottom Highlight Box: Our Design Approach */}
+                  <div className="pt-3 border-t border-[#E8DEC9]">
+                    <div className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#8C432C] mb-1">
+                      OUR DESIGN APPROACH
+                    </div>
+                    <div className="text-xs text-[#5A4D46] font-medium">
+                      Traditional craft • Warm earthy tones • Decorative silhouettes • Thoughtful gifting
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Rule & Page Footer */}
+            <div>
+              <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
+              <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+                <span>DIYA STORE • HANDMADE WITH LOVE</span>
+                <span className="font-mono font-semibold">02</span>
+              </div>
+            </div>
+          </section>
+        </div>
 
 
         {/* =========================================================================
