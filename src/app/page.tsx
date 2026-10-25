@@ -1,9 +1,8 @@
 export const dynamic = 'force-dynamic';
-import Link from 'next/link';
 import { getProducts } from '@/lib/store';
 import { getSettings } from '@/lib/storeSettings';
-import AddToCartButton from '@/components/AddToCartButton';
 import BannerCarousel from '@/components/BannerCarousel';
+import ProductCollection from '@/components/ProductCollection';
 
 export default async function Home() {
   const products = await getProducts();
@@ -15,35 +14,8 @@ export default async function Home() {
       <BannerCarousel headline={settings.heroHeadline} subtitle={settings.heroSubtitle} />
 
       <main id="collection" className="flex-1 max-w-7xl mx-auto p-4 md:p-8 w-full scroll-mt-20">
-        <h2 className="font-merriweather text-3xl font-bold mb-8 text-center mt-8 text-stone-900">Our Collection</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-          {publishedProducts.map(product => (
-            <div key={product.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col border border-stone-200">
-              <Link href={'/product/' + (product.slug || product.id)} className="flex-1">
-                <div className="relative aspect-square bg-stone-100">
-                  {product.isNewArrival && (
-                    <span className="absolute top-2 left-2 z-10 bg-amber-500 text-white text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded shadow-sm">
-                      New Arrival
-                    </span>
-                  )}
-                  {product.images && product.images.length > 0 && (
-                    <img loading="lazy" src={product.images[0].url} alt={product.images[0].alt} className="object-cover w-full h-full" />
-                  )}
-                </div>
-                <div className="p-4">
-                  <div className="text-xs text-stone-500 mb-1">{product.productCode}</div>
-                  <h3 className="font-semibold text-stone-900 mb-2 truncate" title={product.name}>{product.name}</h3>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-bold text-rose-900">₹{product.salePrice || product.price}</span>
-                  </div>
-                </div>
-              </Link>
-              <div className="px-4 pb-4">
-                <AddToCartButton product={product} />
-              </div>
-            </div>
-          ))}
-        </div>
+        <h2 className="font-merriweather text-3xl font-bold mb-6 text-center mt-6 text-stone-900">Our Collection</h2>
+        <ProductCollection products={publishedProducts} />
       </main>
     </div>
   );

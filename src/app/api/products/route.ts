@@ -9,7 +9,13 @@ export async function GET(request: Request) {
   let products = await getProducts();
 
   if (!includeDrafts) {
-    products = products.filter(p => p.status === 'published');
+    // Hide internal inventory cost price from public customers
+    return NextResponse.json(
+      products.filter(p => p.status === 'published').map(p => {
+        const { inventoryPrice, ...safeProduct } = p;
+        return safeProduct;
+      })
+    );
   }
 
   return NextResponse.json(products);
@@ -59,4 +65,23 @@ export async function POST(request: Request) {
   await saveProducts(products);
 
   return NextResponse.json(newProduct, { status: 201 });
+}
+
+export async function DELETE(request: Request) {
+  try {
+    const body = await request.json();
+    const idsToDelete: string[] = Array.isArray(body.ids) ? body.ids : (body.id ? [body.id] : []);
+    
+    if (idsToDelete.length === 0) {
+      return NextResponse.json({ error: 'No product IDs provided' }, { status: 400 });
+    }
+
+    const products = await getProducts();
+    const updatedProducts = products.filter((p) => !idsToDelete.includes(p.id));
+    await saveProducts(updatedProducts);
+
+    return NextResponse.json({ success: true, deletedCount: products.length - updatedProducts.length });
+  } catch (err) {
+    return NextResponse.json({ error: 'Failed to delete products' }, { status: 500 });
+  }
 }

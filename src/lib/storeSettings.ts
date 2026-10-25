@@ -14,7 +14,8 @@ const defaultSettings: StoreSettings = {
   heroSubtitle: "Discover beautiful diyas that bring warmth, tradition, and elegance to every celebration.",
   heroButtonText: "Shop Now",
   autoSlideDelay: 800,
-  mapLocationUrl: "https://maps.app.goo.gl/RKAF5cEqpZuYQtny9?g_st=aw"
+  mapLocationUrl: "https://maps.app.goo.gl/RKAF5cEqpZuYQtny9?g_st=aw",
+  inventoryPin: "1234"
 };
 
 export const getSettings = async (): Promise<StoreSettings> => {

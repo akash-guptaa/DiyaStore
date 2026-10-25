@@ -8,6 +8,7 @@ export interface StoreSettings {
   heroButtonText: string;
   autoSlideDelay: number;
   mapLocationUrl?: string;
+  inventoryPin?: string;
 }
 
 export type Settings = StoreSettings;

@@ -14,6 +14,7 @@ export interface Product {
   description: string;
   price: number;
   salePrice: number | null;
+  inventoryPrice?: number | null;
   categoryId: string;
   images: ProductImage[];
   specifications: Record<string, string>;
@@ -21,6 +22,7 @@ export interface Product {
   status: 'draft' | 'published';
   featured: boolean;
   isNewArrival?: boolean;
+  badge?: string;
   createdAt: string;
   updatedAt: string;
 }

@@ -345,62 +345,67 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
         {/* =========================================================================
             PAGE 3: COLLECTION INTRO (Exact match to Reference PDF Page 3)
         ========================================================================= */}
-        <section className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative w-full md:w-[210mm] min-h-[297mm] h-[297mm] p-6 md:p-[20mm] flex flex-col justify-between shadow-2xl mx-auto border border-[#E8E0D5] box-border overflow-hidden">
-          {/* Top Running Header */}
-          <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
-            <span>DIYA STORE • HANDMADE WITH LOVE</span>
-            <span className="font-mono font-semibold">03</span>
-          </div>
-
-          <div className="text-center pt-4 md:pt-6">
-            <h2 className="font-merriweather font-bold text-2xl md:text-4xl text-[#8C432C] mb-4">
-              The Diya Collection
-            </h2>
-            <p className="font-serif text-xs md:text-sm text-[#5A4D46] max-w-xl mx-auto leading-relaxed">
-              From petite tea-lights to sculptural floral pieces, each design is presented with a short description to help customers explore the collection. Crafted with natural riverbed clay, pure brass, and devotion for your sacred celebrations.
-            </p>
-          </div>
-
-          {/* Center Emblem Card */}
-          <div className="my-auto flex items-center justify-center py-6">
-            <div className="bg-[#FAF2E8] p-6 md:p-10 rounded-sm border border-[#E8DEC9] shadow-inner flex items-center justify-center w-full max-w-sm">
-              <div className="bg-[#8C432C] text-[#FAF7F2] w-52 md:w-60 h-72 md:h-80 rounded-[120px] border-2 border-white/40 flex flex-col items-center justify-center p-6 text-center shadow-md relative">
-                <div className="mb-2 text-amber-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2c.5 2 2 3.5 2 5.5 0 2-1 3.5-2 3.5s-2-1.5-2-3.5c0-2 1.5-3.5 2-5.5z" fill="#FDE68A" stroke="#F59E0B" />
-                    <path d="M4 14c0 4 3.5 7 8 7s8-3 8-7H4z" fill="#FDE68A" stroke="#F59E0B" />
-                    <path d="M2 14h20" stroke="#FDE68A" />
-                  </svg>
-                </div>
-                <div className="font-merriweather italic text-2xl text-amber-100 font-bold tracking-wide">
-                  Diya Store
-                </div>
-                <div className="text-[9px] tracking-[0.28em] uppercase text-amber-200/90 font-medium mt-1">
-                  HANDMADE WITH LOVE
-                </div>
-                <div className="text-xs text-amber-200 my-2">♥</div>
-                <div className="text-[9px] tracking-[0.25em] uppercase text-amber-100 font-semibold mt-1">
-                  PURE • ECO FRIENDLY • PRESENT
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center pb-2">
-            <p className="font-serif text-xs md:text-sm text-[#705B53] font-medium">
-              Decorative diyas & candles for home, celebrations, and gifting
-            </p>
-          </div>
-
-          {/* Bottom Rule & Page Footer */}
-          <div>
-            <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
-            <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+        <div className="flex justify-center w-full print:block">
+          <section 
+            className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative flex flex-col justify-between shadow-2xl border border-[#E8E0D5] box-border overflow-hidden flex-shrink-0"
+            style={{ width: '794px', height: '1123px', minHeight: '1123px', maxHeight: '1123px', margin: 0, padding: '48px 56px', boxSizing: 'border-box' }}
+          >
+            {/* Top Running Header */}
+            <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
               <span>DIYA STORE • HANDMADE WITH LOVE</span>
               <span className="font-mono font-semibold">03</span>
             </div>
-          </div>
-        </section>
+
+            <div className="text-center pt-6">
+              <h2 className="font-merriweather font-bold text-3xl text-[#8C432C] mb-3">
+                The Diya Collection
+              </h2>
+              <p className="font-serif text-xs text-[#5A4D46] max-w-xl mx-auto leading-relaxed">
+                From petite tea-lights to sculptural floral pieces, each design is presented with a short description to help customers explore the collection. Crafted with natural riverbed clay, pure brass, and devotion for your sacred celebrations.
+              </p>
+            </div>
+
+            {/* Center Emblem Card */}
+            <div className="my-auto flex items-center justify-center py-4">
+              <div className="bg-[#FAF2E8] p-8 rounded-sm border border-[#E8DEC9] shadow-inner flex items-center justify-center w-full max-w-sm">
+                <div className="bg-[#8C432C] text-[#FAF7F2] w-60 h-80 rounded-[120px] border-2 border-white/40 flex flex-col items-center justify-center p-6 text-center shadow-md relative">
+                  <div className="mb-2 text-amber-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2c.5 2 2 3.5 2 5.5 0 2-1 3.5-2 3.5s-2-1.5-2-3.5c0-2 1.5-3.5 2-5.5z" fill="#FDE68A" stroke="#F59E0B" />
+                      <path d="M4 14c0 4 3.5 7 8 7s8-3 8-7H4z" fill="#FDE68A" stroke="#F59E0B" />
+                      <path d="M2 14h20" stroke="#FDE68A" />
+                    </svg>
+                  </div>
+                  <div className="font-merriweather italic text-2xl text-amber-100 font-bold tracking-wide">
+                    Diya Store
+                  </div>
+                  <div className="text-[9px] tracking-[0.28em] uppercase text-amber-200/90 font-medium mt-1">
+                    HANDMADE WITH LOVE
+                  </div>
+                  <div className="text-xs text-amber-200 my-2">♥</div>
+                  <div className="text-[9px] tracking-[0.25em] uppercase text-amber-100 font-semibold mt-1">
+                    PURE • ECO FRIENDLY • PRESENT
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center pb-2">
+              <p className="font-serif text-xs text-[#705B53] font-medium">
+                Decorative diyas & candles for home, celebrations, and gifting
+              </p>
+            </div>
+
+            {/* Bottom Rule & Page Footer */}
+            <div>
+              <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
+              <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+                <span>DIYA STORE • HANDMADE WITH LOVE</span>
+                <span className="font-mono font-semibold">03</span>
+              </div>
+            </div>
+          </section>
+        </div>
 
 
         {/* =========================================================================
@@ -413,101 +418,103 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
           const currentPageNum = 4 + pageIndex;
 
           return (
-            <section 
-              key={pageIndex} 
-              className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative w-full md:w-[210mm] min-h-[297mm] h-[297mm] p-6 md:p-[20mm] flex flex-col justify-between shadow-2xl mx-auto border border-[#E8E0D5] box-border overflow-hidden"
-            >
-              {/* Top Running Header */}
-              <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
-                <span>DIYA STORE • HANDMADE WITH LOVE</span>
-                <span className="font-mono font-semibold">{pad(currentPageNum)}</span>
-              </div>
-
-              {/* Page Title & Subtitle */}
-              <div className="pt-2 pb-3">
-                <h2 className="font-merriweather font-bold text-xl md:text-2xl text-[#8C432C]">
-                  The Candle & Diya Collection
-                </h2>
-                <p className="font-serif text-xs text-[#705B53]">
-                  Decorative candles and handcrafted earthen lamps for home, celebrations, and gifting
-                </p>
-              </div>
-
-              {/* Main Framed Container with 3 Rows (Matches exact reference PDF layout) */}
-              <div className="border-[1.5px] border-[#E3D8CC] bg-[#FAF7F2] rounded-sm divide-y divide-[#E3D8CC] flex-1 flex flex-col my-auto shadow-sm overflow-hidden">
-                {chunk.map((product) => {
-                  const imgUrl = product.images?.[0]?.url || '/uploads/terracotta_diya.jpg';
-
-                  return (
-                    <div 
-                      key={product.id} 
-                      className="flex-1 grid grid-cols-12 items-center p-3 md:p-4 gap-4 md:gap-6 bg-[#FAF7F2]"
-                    >
-                      {/* Left: Square Product Image */}
-                      <div className="col-span-4 h-full flex items-center justify-center">
-                        <div className="aspect-square w-full max-w-[130px] md:max-w-[150px] overflow-hidden rounded bg-stone-100 border border-[#E3D8CC] shadow-inner flex-shrink-0">
-                          <img 
-                            src={imgUrl} 
-                            alt={product.name} 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Right: Product Name, Code, Description & Optional Price */}
-                      <div className="col-span-8 flex flex-col justify-center pr-2">
-                        <h3 className="font-merriweather font-bold text-sm md:text-base text-[#8C432C] leading-snug mb-1">
-                          {product.name}
-                        </h3>
-
-                        {/* Product SKU Code & Category Tag */}
-                        <div className="flex items-center gap-2 mb-1.5">
-                          <span className="text-[10px] font-mono font-bold tracking-wider text-[#705B53] uppercase">
-                            Code: {product.productCode}
-                          </span>
-                          {product.categoryId && (
-                            <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.2 bg-[#FAF2E8] border border-[#E8DEC9] text-[#8C432C] rounded">
-                              {product.categoryId}
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Short Description */}
-                        <p className="text-[11px] md:text-xs text-[#4A3E39] leading-relaxed line-clamp-3">
-                          {product.shortDescription || product.description}
-                        </p>
-
-                        {/* Price Tag (Toggleable via action bar) */}
-                        {showPrices && (
-                          <div className="mt-2 flex items-center gap-2 font-bold text-[#8C432C] text-xs md:text-sm">
-                            <span>₹{product.salePrice || product.price}</span>
-                            {product.salePrice && (
-                              <span className="text-[11px] line-through text-stone-400 font-normal">
-                                MRP ₹{product.price}
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-
-                {/* If the last page has only 1 or 2 products, render clean empty placeholder rows to maintain grid balance */}
-                {chunk.length < 3 && Array.from({ length: 3 - chunk.length }).map((_, emptyIdx) => (
-                  <div key={emptyIdx} className="flex-1 bg-[#FAF7F2]/60 hidden md:block"></div>
-                ))}
-              </div>
-
-              {/* Bottom Rule & Page Footer */}
-              <div>
-                <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
-                <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+            <div key={pageIndex} className="flex justify-center w-full print:block">
+              <section 
+                className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative flex flex-col justify-between shadow-2xl border border-[#E8E0D5] box-border overflow-hidden flex-shrink-0"
+                style={{ width: '794px', height: '1123px', minHeight: '1123px', maxHeight: '1123px', margin: 0, padding: '48px 56px', boxSizing: 'border-box' }}
+              >
+                {/* Top Running Header */}
+                <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
                   <span>DIYA STORE • HANDMADE WITH LOVE</span>
                   <span className="font-mono font-semibold">{pad(currentPageNum)}</span>
                 </div>
-              </div>
-            </section>
+
+                {/* Page Title & Subtitle */}
+                <div className="pt-2 pb-3">
+                  <h2 className="font-merriweather font-bold text-2xl text-[#8C432C]">
+                    The Candle & Diya Collection
+                  </h2>
+                  <p className="font-serif text-xs text-[#705B53]">
+                    Decorative candles and handcrafted earthen lamps for home, celebrations, and gifting
+                  </p>
+                </div>
+
+                {/* Main Framed Container with 3 Rows (Matches exact reference PDF layout) */}
+                <div className="border-[1.5px] border-[#E3D8CC] bg-[#FAF7F2] rounded-sm divide-y divide-[#E3D8CC] flex-1 flex flex-col my-auto shadow-sm overflow-hidden">
+                  {chunk.map((product) => {
+                    const imgUrl = product.images?.[0]?.url || '/uploads/terracotta_diya.jpg';
+
+                    return (
+                      <div 
+                        key={product.id} 
+                        className="flex-1 grid grid-cols-12 items-center p-4 gap-6 bg-[#FAF7F2]"
+                      >
+                        {/* Left: Square Product Image */}
+                        <div className="col-span-4 h-full flex items-center justify-center">
+                          <div className="aspect-square w-full max-w-[145px] overflow-hidden rounded bg-stone-100 border border-[#E3D8CC] shadow-inner flex-shrink-0">
+                            <img 
+                              src={imgUrl} 
+                              alt={product.name} 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Right: Product Name, Code, Description & Optional Price */}
+                        <div className="col-span-8 flex flex-col justify-center pr-2">
+                          <h3 className="font-merriweather font-bold text-base text-[#8C432C] leading-snug mb-1">
+                            {product.name}
+                          </h3>
+
+                          {/* Product SKU Code & Category Tag */}
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <span className="text-[10px] font-mono font-bold tracking-wider text-[#705B53] uppercase">
+                              Code: {product.productCode}
+                            </span>
+                            {product.categoryId && (
+                              <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.5 bg-[#FAF2E8] border border-[#E8DEC9] text-[#8C432C] rounded">
+                                {product.categoryId}
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Short Description */}
+                          <p className="text-xs text-[#4A3E39] leading-relaxed line-clamp-3">
+                            {product.shortDescription || product.description}
+                          </p>
+
+                          {/* Price Tag (Toggleable via action bar) */}
+                          {showPrices && (
+                            <div className="mt-2 flex items-center gap-2 font-bold text-[#8C432C] text-sm">
+                              <span>₹{product.salePrice || product.price}</span>
+                              {product.salePrice && (
+                                <span className="text-[11px] line-through text-stone-400 font-normal">
+                                  MRP ₹{product.price}
+                                </span>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+
+                  {/* If the last page has only 1 or 2 products, render clean empty placeholder rows to maintain grid balance */}
+                  {chunk.length < 3 && Array.from({ length: 3 - chunk.length }).map((_, emptyIdx) => (
+                    <div key={emptyIdx} className="flex-1 bg-[#FAF7F2]/60"></div>
+                  ))}
+                </div>
+
+                {/* Bottom Rule & Page Footer */}
+                <div>
+                  <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
+                  <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+                    <span>DIYA STORE • HANDMADE WITH LOVE</span>
+                    <span className="font-mono font-semibold">{pad(currentPageNum)}</span>
+                  </div>
+                </div>
+              </section>
+            </div>
           );
         })}
 
@@ -515,96 +522,101 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
         {/* =========================================================================
             FINAL PAGE: CONTACT, BULK ORDERS & CUSTOM GIFTING
         ========================================================================= */}
-        <section className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative w-full md:w-[210mm] min-h-[297mm] h-[297mm] p-6 md:p-[20mm] flex flex-col justify-between shadow-2xl mx-auto border border-[#E8E0D5] box-border overflow-hidden">
-          {/* Top Running Header */}
-          <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
-            <span>DIYA STORE • HANDMADE WITH LOVE</span>
-            <span className="font-mono font-semibold">{pad(totalPages)}</span>
-          </div>
-
-          <div className="my-auto">
-            <h2 className="font-merriweather font-bold text-2xl md:text-3xl text-[#8C432C] mb-4 text-center">
-              Ordering & Custom Gifting
-            </h2>
-            <p className="text-center font-serif text-xs md:text-sm text-[#705B53] max-w-lg mx-auto mb-8">
-              We deliver handcrafted diyas, bespoke festive hampers, and personalized wedding favors across India with secure packaging.
-            </p>
-
-            {/* Framed Container with 2 Sections */}
-            <div className="border-[1.5px] border-[#8C432C]/70 bg-[#FDFCFA] p-6 md:p-8 rounded-sm grid grid-cols-1 md:grid-cols-2 gap-8 shadow-sm">
-              
-              {/* Left Column: How to Order */}
-              <div className="space-y-4">
-                <div className="text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase text-[#8C432C] border-b border-[#E8DEC9] pb-1.5">
-                  HOW TO ORDER
-                </div>
-
-                <div className="space-y-2 text-xs text-[#4A3E39]">
-                  <div className="flex items-start gap-2">
-                    <span className="font-bold text-[#8C432C]">1.</span>
-                    <span>Browse this catalogue and note your desired <strong>Product Codes</strong> and quantities.</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="font-bold text-[#8C432C]">2.</span>
-                    <span>Send us a message directly on WhatsApp with your selection and delivery address.</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="font-bold text-[#8C432C]">3.</span>
-                    <span>We pack your order in break-safe protective packaging and ship directly to your doorstep.</span>
-                  </div>
-                </div>
-
-                {/* Direct Contacts */}
-                <div className="pt-2 space-y-1.5 text-xs text-[#4A3E39]">
-                  <div className="font-semibold text-stone-900">Contact & Support:</div>
-                  <div>📞 Phone / WhatsApp: <span className="font-mono font-bold text-[#8C432C]">+91 7400422743 / +91 9322274986</span></div>
-                  <div>📍 Address: <span className="text-stone-600">{settings.address || 'Shop No. 1, Girnar Dharshan, Narayan Nagar Road, Bhayandar West, Maharashtra – 401101'}</span></div>
-                  <div>🌐 Website: <span className="text-[#8C432C] font-medium">diyastore.netlify.app</span></div>
-                </div>
-              </div>
-
-              {/* Right Column: Bulk & Custom Hampers */}
-              <div className="space-y-4 flex flex-col justify-between">
-                <div>
-                  <div className="text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase text-[#8C432C] border-b border-[#E8DEC9] pb-1.5">
-                    BULK & CORPORATE GIFTING
-                  </div>
-                  <p className="text-xs text-[#4A3E39] leading-relaxed mt-2">
-                    Looking for corporate Diwali gifts, wedding returns, or festive hampers? We offer custom branded boxes, artisan gift sets, and attractive wholesale discounts for bulk orders.
-                  </p>
-
-                  <div className="mt-4 p-3 bg-[#FAF2E8] border border-[#E8DEC9] rounded text-center">
-                    <span className="text-xs font-bold text-[#8C432C] block mb-1">
-                      Ready to Place an Order?
-                    </span>
-                    <a 
-                      href={`https://wa.me/917400422743?text=${encodeURIComponent("Hello Diya Store! I am viewing your PDF Catalogue and would like to place an order.")}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-block mt-1 px-4 py-1.5 bg-[#25D366] text-white text-xs font-bold rounded-full shadow hover:bg-[#20bd5a] transition-all"
-                    >
-                      Chat on WhatsApp Now
-                    </a>
-                  </div>
-                </div>
-
-                <blockquote className="italic text-xs text-[#5A4D46] border-l-2 border-[#8C432C] pl-3 py-1">
-                  “May the divine light of deepam fill your home with peace, joy, and prosperity.”
-                </blockquote>
-              </div>
-
-            </div>
-          </div>
-
-          {/* Bottom Rule & Page Footer */}
-          <div>
-            <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
-            <div className="flex justify-between items-center text-[10px] md:text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+        <div className="flex justify-center w-full print:block">
+          <section 
+            className="catalogue-page bg-[#FAF7F2] text-[#3D332F] relative flex flex-col justify-between shadow-2xl border border-[#E8E0D5] box-border overflow-hidden flex-shrink-0"
+            style={{ width: '794px', height: '1123px', minHeight: '1123px', maxHeight: '1123px', margin: 0, padding: '48px 56px', boxSizing: 'border-box' }}
+          >
+            {/* Top Running Header */}
+            <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase pb-2">
               <span>DIYA STORE • HANDMADE WITH LOVE</span>
               <span className="font-mono font-semibold">{pad(totalPages)}</span>
             </div>
-          </div>
-        </section>
+
+            <div className="my-auto">
+              <h2 className="font-merriweather font-bold text-3xl text-[#8C432C] mb-3 text-center">
+                Ordering & Custom Gifting
+              </h2>
+              <p className="text-center font-serif text-xs text-[#705B53] max-w-lg mx-auto mb-8">
+                We deliver handcrafted diyas, bespoke festive hampers, and personalized wedding favors across India with secure packaging.
+              </p>
+
+              {/* Framed Container with 2 Sections */}
+              <div className="border-[1.5px] border-[#8C432C]/70 bg-[#FDFCFA] p-8 rounded-sm grid grid-cols-2 gap-8 shadow-sm">
+                
+                {/* Left Column: How to Order */}
+                <div className="space-y-4">
+                  <div className="text-xs font-bold tracking-[0.2em] uppercase text-[#8C432C] border-b border-[#E8DEC9] pb-1.5">
+                    HOW TO ORDER
+                  </div>
+
+                  <div className="space-y-2 text-xs text-[#4A3E39]">
+                    <div className="flex items-start gap-2">
+                      <span className="font-bold text-[#8C432C]">1.</span>
+                      <span>Browse this catalogue and note your desired <strong>Product Codes</strong> and quantities.</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="font-bold text-[#8C432C]">2.</span>
+                      <span>Send us a message directly on WhatsApp with your selection and delivery address.</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="font-bold text-[#8C432C]">3.</span>
+                      <span>We pack your order in break-safe protective packaging and ship directly to your doorstep.</span>
+                    </div>
+                  </div>
+
+                  {/* Direct Contacts */}
+                  <div className="pt-2 space-y-1.5 text-xs text-[#4A3E39]">
+                    <div className="font-semibold text-stone-900">Contact & Support:</div>
+                    <div>📞 Phone / WhatsApp: <span className="font-mono font-bold text-[#8C432C]">+91 7400422743 / +91 9322274986</span></div>
+                    <div>📍 Address: <span className="text-stone-600">{settings.address || 'Shop No. 1, Girnar Dharshan, Narayan Nagar Road, Bhayandar West, Maharashtra – 401101'}</span></div>
+                    <div>🌐 Website: <span className="text-[#8C432C] font-medium">diyastore.netlify.app</span></div>
+                  </div>
+                </div>
+
+                {/* Right Column: Bulk & Custom Hampers */}
+                <div className="space-y-4 flex flex-col justify-between">
+                  <div>
+                    <div className="text-xs font-bold tracking-[0.2em] uppercase text-[#8C432C] border-b border-[#E8DEC9] pb-1.5">
+                      BULK & CORPORATE GIFTING
+                    </div>
+                    <p className="text-xs text-[#4A3E39] leading-relaxed mt-2">
+                      Looking for corporate Diwali gifts, wedding returns, or festive hampers? We offer custom branded boxes, artisan gift sets, and attractive wholesale discounts for bulk orders.
+                    </p>
+
+                    <div className="mt-4 p-3 bg-[#FAF2E8] border border-[#E8DEC9] rounded text-center">
+                      <span className="text-xs font-bold text-[#8C432C] block mb-1">
+                        Ready to Place an Order?
+                      </span>
+                      <a 
+                        href={`https://wa.me/917400422743?text=${encodeURIComponent("Hello Diya Store! I am viewing your PDF Catalogue and would like to place an order.")}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-block mt-1 px-4 py-1.5 bg-[#25D366] text-white text-xs font-bold rounded-full shadow hover:bg-[#20bd5a] transition-all"
+                      >
+                        Chat on WhatsApp Now
+                      </a>
+                    </div>
+                  </div>
+
+                  <blockquote className="italic text-xs text-[#5A4D46] border-l-2 border-[#8C432C] pl-3 py-1">
+                    “May the divine light of deepam fill your home with peace, joy, and prosperity.”
+                  </blockquote>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Bottom Rule & Page Footer */}
+            <div>
+              <div className="border-b border-[#E3D8CC] w-full mb-3"></div>
+              <div className="flex justify-between items-center text-[11px] tracking-[0.25em] font-serif text-[#705B53] uppercase">
+                <span>DIYA STORE • HANDMADE WITH LOVE</span>
+                <span className="font-mono font-semibold">{pad(totalPages)}</span>
+              </div>
+            </div>
+          </section>
+        </div>
 
       </div>
     </div>

@@ -90,7 +90,28 @@ export default function AdminSettings() {
           </div>
         </div>
 
-        <button type="submit" disabled={saving} className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 font-medium">
+        <div>
+          <h2 className="text-xl font-semibold mb-4 border-b pb-2 mt-8">Security & Inventory PIN</h2>
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium mb-1">Inventory Price & Deletion 4-Digit PIN</label>
+              <input 
+                type="text" 
+                maxLength={4} 
+                name="inventoryPin" 
+                value={settings.inventoryPin || '1234'} 
+                onChange={handleChange} 
+                className="w-full max-w-xs border rounded p-2 font-mono text-lg tracking-widest font-bold text-rose-900 bg-stone-50" 
+                placeholder="1234"
+              />
+              <p className="text-xs text-stone-500 mt-1">
+                4-digit PIN required to view/edit internal inventory prices and to delete orders, products, and customers (default: <strong>1234</strong>).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" disabled={saving} className="bg-rose-800 text-white px-6 py-2.5 rounded-lg hover:bg-rose-900 font-medium transition-colors shadow-sm">
           {saving ? 'Saving...' : 'Save Settings'}
         </button>
       </form>

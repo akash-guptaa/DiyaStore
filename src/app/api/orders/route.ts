@@ -34,3 +34,22 @@ export async function POST(request: Request) {
 
   return NextResponse.json(newOrder, { status: 201 });
 }
+
+export async function DELETE(request: Request) {
+  try {
+    const body = await request.json();
+    const idsToDelete: string[] = Array.isArray(body.ids) ? body.ids : (body.id ? [body.id] : []);
+    
+    if (idsToDelete.length === 0) {
+      return NextResponse.json({ error: 'No order IDs provided' }, { status: 400 });
+    }
+
+    const orders = await getOrders();
+    const updatedOrders = orders.filter((o) => !idsToDelete.includes(o.id));
+    await saveOrders(updatedOrders);
+
+    return NextResponse.json({ success: true, deletedCount: orders.length - updatedOrders.length });
+  } catch (err) {
+    return NextResponse.json({ error: 'Failed to delete orders' }, { status: 500 });
+  }
+}

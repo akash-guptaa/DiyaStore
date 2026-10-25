@@ -25,9 +25,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         <div>
           <div className="flex items-center gap-2 mb-2">
             <span className="text-sm text-stone-500 font-mono tracking-wide">{product.productCode}</span>
-            {product.isNewArrival && (
+            {(product.badge || product.isNewArrival) && (
               <span className="bg-amber-500 text-white text-xs font-bold uppercase px-2 py-0.5 rounded shadow-sm">
-                New Arrival
+                {product.badge || 'New Arrival'}
               </span>
             )}
           </div>

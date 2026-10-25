@@ -21,3 +21,13 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
 
   return NextResponse.json(updatedOrder);
 }
+
+export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const orders = await getOrders();
+  
+  const updatedOrders = orders.filter((o) => o.id !== id);
+  await saveOrders(updatedOrders);
+
+  return new NextResponse(null, { status: 204 });
+}
