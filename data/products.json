@@ -63,7 +63,9 @@
     "featured": true,
     "isNewArrival": true,
     "createdAt": "2026-10-11T17:49:56.442Z",
-    "updatedAt": "2026-10-11T18:11:53.566Z"
+    "updatedAt": "2026-10-25T16:03:05.134Z",
+    "inventoryPrice": 20,
+    "badge": "Best Sale"
   },
   {
     "id": "prod_na_peacock_02",

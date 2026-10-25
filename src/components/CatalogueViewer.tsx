@@ -3,6 +3,7 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Product } from '@/types';
 import { Settings } from '@/types/settings';
+import ProductBadge from '@/components/ProductBadge';
 
 export default function CatalogueViewer({ products, settings }: { products: Product[]; settings: Settings }) {
   const [showPrices, setShowPrices] = useState(true);
@@ -475,6 +476,9 @@ export default function CatalogueViewer({ products, settings }: { products: Prod
                               <span className="text-[9px] uppercase tracking-wider px-1.5 py-0.5 bg-[#FAF2E8] border border-[#E8DEC9] text-[#8C432C] rounded">
                                 {product.categoryId}
                               </span>
+                            )}
+                            {(product.badge || product.isNewArrival) && (
+                              <ProductBadge badge={product.badge || (product.isNewArrival ? 'New Arrival' : '')} size="xs" showIcon={false} />
                             )}
                           </div>
 

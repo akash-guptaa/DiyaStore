@@ -4,6 +4,7 @@ import { getSettings } from '@/lib/storeSettings';
 import { notFound } from 'next/navigation';
 import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
+import ProductBadge from '@/components/ProductBadge';
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -26,9 +27,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <div className="flex items-center gap-2 mb-2">
             <span className="text-sm text-stone-500 font-mono tracking-wide">{product.productCode}</span>
             {(product.badge || product.isNewArrival) && (
-              <span className="bg-amber-500 text-white text-xs font-bold uppercase px-2 py-0.5 rounded shadow-sm">
-                {product.badge || 'New Arrival'}
-              </span>
+              <ProductBadge badge={product.badge || (product.isNewArrival ? 'New Arrival' : '')} size="md" showIcon />
             )}
           </div>
           <h1 className="text-3xl font-merriweather font-bold mb-4 text-stone-900">{product.name}</h1>

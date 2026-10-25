@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { Product, ProductImage } from '@/types';
 import Pagination from '@/components/Pagination';
 import PinModal from '@/components/PinModal';
+import { BADGE_OPTIONS, getBadgeColors } from '@/components/ProductBadge';
 
 export default function AdminProducts() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -49,6 +50,7 @@ export default function AdminProducts() {
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [stockFilter, setStockFilter] = useState('all');
+  const [badgeFilter, setBadgeFilter] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
 
@@ -64,6 +66,15 @@ export default function AdminProducts() {
       if (stockFilter === 'in_stock' && (p.stockQuantity || 0) <= 0) return false;
       if (stockFilter === 'out_of_stock' && (p.stockQuantity || 0) > 0) return false;
 
+      if (badgeFilter !== 'all') {
+        const currentBadge = (p.badge || (p.isNewArrival ? 'New Arrival' : '')).trim();
+        if (badgeFilter === 'none') {
+          if (currentBadge !== '') return false;
+        } else {
+          if (currentBadge.toLowerCase() !== badgeFilter.toLowerCase()) return false;
+        }
+      }
+
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
         const matchesName = p.name?.toLowerCase().includes(q);
@@ -75,12 +86,12 @@ export default function AdminProducts() {
       }
       return true;
     });
-  }, [products, categoryFilter, stockFilter, searchQuery]);
+  }, [products, categoryFilter, stockFilter, badgeFilter, searchQuery]);
 
   useEffect(() => {
     setCurrentPage(1);
     setSelectedProductIds([]);
-  }, [searchQuery, categoryFilter, stockFilter]);
+  }, [searchQuery, categoryFilter, stockFilter, badgeFilter]);
 
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage) || 1;
   const paginatedProducts = useMemo(() => {
@@ -204,8 +215,8 @@ export default function AdminProducts() {
       price: Number(formData.price),
       salePrice: formData.salePrice ? Number(formData.salePrice) : null,
       inventoryPrice: formData.inventoryPrice !== '' ? Number(formData.inventoryPrice) : null,
-      badge: formData.badge.trim() || undefined,
-      isNewArrival: formData.badge.toLowerCase().includes('new') || formData.isNewArrival,
+      badge: formData.badge.trim() || '',
+      isNewArrival: formData.badge.trim().toLowerCase().includes('new') || formData.isNewArrival,
       stockQuantity: Number(formData.stockQuantity),
       images: uploadedImages,
       status: 'published'
@@ -299,9 +310,10 @@ export default function AdminProducts() {
   const downloadSampleTemplate = () => {
     const headers = ['Code', 'Name', 'Price', 'Sale Price', 'Stock', 'Category', 'Badge', 'Short Description', 'Description', 'Image URL'];
     const sampleRows = [
-      ['"DIYA-201"', '"Royal Mayur Brass Peacock Diya"', '1299', '999', '40', '"brass"', '"Bestseller"', '"Exquisite handcrafted brass peacock diya"', '"Traditional brass deepam with five oil wells and royal feather engravings"', '"/uploads/peacock_brass_diya.jpg"'],
+      ['"DIYA-201"', '"Royal Mayur Brass Peacock Diya"', '1299', '999', '40', '"brass"', '"Best Sale"', '"Exquisite handcrafted brass peacock diya"', '"Traditional brass deepam with five oil wells and royal feather engravings"', '"/uploads/peacock_brass_diya.jpg"'],
       ['"DIYA-202"', '"Handmade Lotus Terracotta Diya"', '349', '249', '80', '"terracotta"', '"New Arrival"', '"Pink lotus petal clay diya with glitter"', '"Multi-layered blooming lotus diya hand-painted with gold highlights"', '"/uploads/blooming_lotus_diya_1.jpg"'],
-      ['"DIYA-203"', '"Auspicious Shubh Labh Hanging Diya Pair"', '399', '299', '50', '"terracotta"', '"Festive Special"', '"Door hanging clay diya pair with bells and loops"', '"Sacred Shubh Labh earthen diya pair for entrance and puja altar"', '"/uploads/shubh_labh_diya_1.jpg"']
+      ['"DIYA-203"', '"Auspicious Shubh Labh Hanging Diya Pair"', '399', '299', '50', '"terracotta"', '"Sale in 24 hours"', '"Door hanging clay diya pair with bells and loops"', '"Sacred Shubh Labh earthen diya pair for entrance and puja altar"', '"/uploads/shubh_labh_diya_1.jpg"'],
+      ['"DIYA-204"', '"Royal Crystal Kundan Aarti Thali"', '899', '699', '30', '"designer"', '"Best Value"', '"Sparkling puja plate with 5 diya holders"', '"Premium kundan stone embellished brass thali"', '"/uploads/kundan_aarti_thali.jpg"']
     ];
     const csvContent = "data:text/csv;charset=utf-8," + [headers.join(','), ...sampleRows.map(r => r.join(','))].join("\n");
     const encodedUri = encodeURI(csvContent);
@@ -574,6 +586,23 @@ export default function AdminProducts() {
               <option value="out_of_stock">Out of Stock (0)</option>
             </select>
           </div>
+
+          {/* Badge Filter */}
+          <div className="flex items-center gap-1.5 text-xs text-stone-600">
+            <span className="text-stone-400">Badge:</span>
+            <select
+              value={badgeFilter}
+              onChange={(e) => setBadgeFilter(e.target.value)}
+              className="bg-stone-50 border border-stone-300 rounded-lg px-2.5 py-1.5 text-xs text-stone-700 outline-none focus:ring-1 focus:ring-rose-800"
+            >
+              <option value="all">All Badges</option>
+              <option value="New Arrival">✨ New Arrival</option>
+              <option value="Best Sale">🔥 Best Sale</option>
+              <option value="Best Value">💎 Best Value</option>
+              <option value="Sale in 24 hours">⚡ Sale in 24 hours</option>
+              <option value="none">No Badge</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -701,8 +730,9 @@ export default function AdminProducts() {
                   {/* Badge Column */}
                   <td className="p-4">
                     {badgeText ? (
-                      <span className="bg-amber-100 text-amber-900 border border-amber-200 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
-                        {badgeText}
+                      <span className={`inline-flex items-center gap-1 border text-[10px] px-2 py-0.5 rounded uppercase tracking-wider ${getBadgeColors(badgeText).admin}`}>
+                        <span>{getBadgeColors(badgeText).icon}</span>
+                        <span>{badgeText}</span>
                       </span>
                     ) : (
                       <span className="text-stone-300 text-xs">—</span>
@@ -931,30 +961,70 @@ export default function AdminProducts() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">Product Badge (Shown on storefront)</label>
-                  <div className="flex gap-2">
-                    <input 
-                      type="text" 
-                      name="badge" 
-                      value={formData.badge} 
-                      onChange={handleChange} 
-                      className="w-full border border-stone-300 rounded-lg p-2 text-sm focus:ring-1 focus:ring-rose-800 outline-none font-medium" 
-                      placeholder="e.g. New Arrival, Bestseller, Limited" 
-                    />
-                    <select
-                      onChange={(e) => {
-                        if (e.target.value) setFormData({ ...formData, badge: e.target.value });
-                      }}
-                      className="border border-stone-300 rounded-lg px-2 text-xs text-stone-600 bg-stone-50 outline-none"
-                    >
-                      <option value="">Quick Presets</option>
-                      <option value="New Arrival">New Arrival</option>
-                      <option value="Bestseller">Bestseller</option>
-                      <option value="Festive Special">Festive Special</option>
-                      <option value="Limited Edition">Limited Edition</option>
-                      <option value="Handmade">Handmade</option>
-                    </select>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider">Product Badge (Shown on storefront)</label>
+                    {formData.badge && (
+                      <button
+                        type="button"
+                        onClick={() => setFormData({ ...formData, badge: '' })}
+                        className="text-[11px] text-stone-400 hover:text-red-600 underline font-semibold"
+                      >
+                        Clear Badge
+                      </button>
+                    )}
                   </div>
+
+                  {/* Primary Dropdown with the 4 options */}
+                  <select
+                    value={['', 'New Arrival', 'Best Sale', 'Best Value', 'Sale in 24 hours'].includes(formData.badge) ? formData.badge : 'custom'}
+                    onChange={(e) => {
+                      if (e.target.value !== 'custom') {
+                        setFormData({ ...formData, badge: e.target.value });
+                      }
+                    }}
+                    className="w-full border border-stone-300 rounded-lg p-2 text-sm focus:ring-1 focus:ring-rose-800 outline-none bg-white font-medium mb-2"
+                  >
+                    <option value="">-- No Badge --</option>
+                    <option value="New Arrival">✨ New Arrival</option>
+                    <option value="Best Sale">🔥 Best Sale</option>
+                    <option value="Best Value">💎 Best Value</option>
+                    <option value="Sale in 24 hours">⚡ Sale in 24 hours</option>
+                    <option value="custom">✏️ Custom Badge...</option>
+                  </select>
+
+                  {/* Quick Select Pill Buttons */}
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    {BADGE_OPTIONS.map((opt) => {
+                      const isSelected = formData.badge.trim().toLowerCase() === opt.toLowerCase();
+                      const colors = getBadgeColors(opt);
+                      return (
+                        <button
+                          type="button"
+                          key={opt}
+                          onClick={() => setFormData({ ...formData, badge: isSelected ? '' : opt })}
+                          className={`text-xs font-bold px-2.5 py-1 rounded-md border transition-all flex items-center gap-1 ${
+                            isSelected 
+                              ? `${colors.pill} shadow-xs scale-102` 
+                              : 'bg-stone-50 text-stone-600 border-stone-200 hover:bg-stone-100 hover:border-stone-300'
+                          }`}
+                        >
+                          <span>{colors.icon}</span>
+                          <span>{opt}</span>
+                          {isSelected && <span className="ml-0.5 text-xs">✓</span>}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Custom badge text input */}
+                  <input 
+                    type="text" 
+                    name="badge" 
+                    value={formData.badge} 
+                    onChange={handleChange} 
+                    className="w-full border border-stone-200 rounded-lg p-1.5 text-xs focus:ring-1 focus:ring-rose-800 outline-none text-stone-700" 
+                    placeholder="Or type custom badge name" 
+                  />
                 </div>
               </div>
 
